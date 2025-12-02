@@ -1,14 +1,14 @@
-/* --- CẤU HÌNH MÀU SẮC CHỦ ĐẠO CHO WEBSITE (biến màu dùng xuyên suốt) --- */
+/* --- CẤU HÌNH MÀU SẮC CHỦ ĐẠO CHO WEBSITE --- */
 :root {
-    --primary-orange: #CC5500;     /* Màu cam chủ đạo */
-    --bg-cream: #FFF0D9;           /* Màu nền kem */
-    --secondary-teal: #83A5A5;     /* Màu xanh nhạt phụ */
-    --text-dark: #333;             /* Màu chữ đậm */
-    --text-light: #666;            /* Màu chữ nhạt */
-    --white: #ffffff;              /* Màu trắng */
+    --primary-orange: #CC5500;    
+    --bg-cream: #FFF0D9;          
+    --secondary-teal: #83A5A5;    
+    --text-dark: #333;            
+    --text-light: #666;           
+    --white: #ffffff;             
 }
 
-/* RESET CSS: reset margin, padding và chọn font Roboto cho toàn trang */
+/* --- RESET CSS CHO TOÀN TRANG --- */
 * { 
     margin: 0; 
     padding: 0; 
@@ -16,16 +16,17 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* MÀU NỀN VÀ MÀU CHỮ MẶC ĐỊNH */
+/* --- NỀN VÀ CHỮ MẶC ĐỊNH CỦA TRANG --- */
 body {
     background-color: var(--white);
     color: var(--text-dark);
 }
 
-
 /* =====================================================
-   HEADER – thanh phía trên gồm logo + mạng xã hội + tìm kiếm
+   HEADER – logo + mạng xã hội + ô tìm kiếm
    ===================================================== */
+
+/* --- Header tổng --- */
 header {
     background-color: var(--bg-cream);
     height: 100px;
@@ -35,22 +36,22 @@ header {
     padding: 0 50px;
 }
 
-/* Khối chứa logo + chữ CookLand */
+/* --- Khối chứa logo + chữ CookLand --- */
 .logo-container {
-    display: flex;          
-    align-items: center;    
-    gap: 15px;              
+    display: flex;
+    align-items: center;
+    gap: 15px;
     cursor: pointer;
 }
 
-/* Ảnh logo */
+/* --- Ảnh logo --- */
 .logo-container img { 
     height: 75px; 
     width: auto; 
     object-fit: contain; 
 }
 
-/* Chữ “CookLand” */
+/* --- Chữ COOKLAND --- */
 .logo-text {
     font-size: 36px;
     font-weight: 900;
@@ -59,20 +60,20 @@ header {
     letter-spacing: 2px;
 }
 
-/* Khối bên phải chứa mạng xã hội + ô tìm kiếm */
+/* --- Khối bên phải header --- */
 .header-right { 
     display: flex; 
     align-items: center; 
     gap: 50px; 
 }
 
-/* Các icon mạng xã hội */
+/* --- Dãy icon mạng xã hội --- */
 .social-icons { 
     display: flex; 
     gap: 25px; 
 }
 
-/* Icon mạng xã hội + hiệu ứng hover */
+/* --- Từng icon mạng xã hội --- */
 .social-icons a { 
     color: var(--secondary-teal); 
     font-size: 22px; 
@@ -83,14 +84,14 @@ header {
     transform: translateY(-2px); 
 }
 
-/* Ô tìm kiếm */
+/* --- Khối ô tìm kiếm --- */
 .search-container { 
     position: relative; 
     display: flex; 
     align-items: center; 
 }
 
-/* Input tìm kiếm */
+/* --- Ô nhập tìm kiếm --- */
 .search-container input {
     width: 500px; 
     height: 45px; 
@@ -101,12 +102,12 @@ header {
     background: var(--white);
 }
 
-/* Input khi focus */
+/* --- Hiệu ứng focus của ô input --- */
 .search-container input:focus { 
     border-color: var(--primary-orange); 
 }
 
-/* Nút icon kính lúp */
+/* --- Nút kính lúp --- */
 .search-btn { 
     position: absolute; 
     right: 20px; 
@@ -117,10 +118,11 @@ header {
     font-size: 18px; 
 }
 
-
 /* =====================================================
-   NAVIGATION BAR – thanh menu màu cam bên dưới header
+   NAVIGATION BAR – menu màu cam
    ===================================================== */
+
+/* --- Thanh nav chính --- */
 nav.main-nav {
     background-color: var(--primary-orange);
     height: 55px;
@@ -134,7 +136,7 @@ nav.main-nav {
     z-index: 100;
 }
 
-/* Menu ngang chính */
+/* --- Menu ngang chính --- */
 .nav-menu {
     display: flex; 
     list-style: none; 
@@ -143,7 +145,7 @@ nav.main-nav {
     margin-right: 80px;
 }
 
-/* Link từng mục trên menu */
+/* --- Từng mục trong menu --- */
 .nav-menu li a {
     text-decoration: none; 
     color: var(--white);
@@ -156,7 +158,7 @@ nav.main-nav {
     white-space: nowrap;
 }
 
-/* Gạch underline khi hover */
+/* --- Gạch underline khi hover --- */
 .nav-menu li a::after {
     content: ''; 
     position: absolute; 
@@ -171,7 +173,7 @@ nav.main-nav {
 .nav-menu li a:hover { color: var(--bg-cream); }
 .nav-menu li a:hover::after { width: 100%; }
 
-/* Nút đăng nhập bên phải */
+/* --- Nút đăng nhập --- */
 .login-btn {
     text-decoration: none; 
     color: var(--white); 
@@ -192,10 +194,11 @@ nav.main-nav {
     color: var(--primary-orange); 
 }
 
-
 /* =====================================================
-   HERO SLIDER – phần slider ảnh lớn kèm chữ giữa màn hình
+   HERO SLIDER
    ===================================================== */
+
+/* --- Slider tổng --- */
 .hero-slider { 
     position: relative; 
     width: 100%; 
@@ -203,7 +206,7 @@ nav.main-nav {
     overflow: hidden; 
 }
 
-/* Mỗi slide (ẩn mặc định) */
+/* --- Mỗi slide --- */
 .slide { 
     display: none; 
     width: 100%; 
@@ -211,21 +214,21 @@ nav.main-nav {
     position: relative; 
 }
 
-/* Slide đang active → hiển thị */
+/* --- Slide đang active --- */
 .slide.active { 
     display: block; 
     animation: fadeIn 0.5s ease; 
 }
 
-/* Ảnh nền trong slide */
+/* --- Ảnh nền slide --- */
 .slide img { 
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
-    filter: brightness(0.65);  /* làm tối ảnh để chữ nổi hơn */
+    filter: brightness(0.65);  
 }
 
-/* Khối chữ giữa slide */
+/* --- Chữ giữa slide --- */
 .slide-content {
     position: absolute;
     top: 50%;
@@ -237,24 +240,24 @@ nav.main-nav {
     z-index: 5;
 }
 
-/* Hiệu ứng chữ chạy lên khi slide active */
+/* --- Animation chữ khi slide active --- */
 .slide.active .slide-content {
     animation: slideUpText 1s ease forwards;
 }
 
-/* Hiệu ứng fade cho slide */
+/* --- Animation mờ dần --- */
 @keyframes fadeIn { 
     from { opacity: 0.8; } 
     to { opacity: 1; } 
 }
 
-/* Chữ bay lên */
+/* --- Animation chữ bay lên --- */
 @keyframes slideUpText {
     from { opacity: 0; transform: translate(-50%, -40%); }
     to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
-/* Subtitle nhỏ trên slide */
+/* --- Subtitle nhỏ --- */
 .slide-subtitle {
     font-size: 18px;
     font-weight: 700;
@@ -269,7 +272,7 @@ nav.main-nav {
     border-radius: 20px;
 }
 
-/* Tiêu đề lớn */
+/* --- Tiêu đề lớn --- */
 .slide-title {
     font-size: 55px;
     font-weight: 900;
@@ -279,7 +282,7 @@ nav.main-nav {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
-/* Nút hành động */
+/* --- Nút CTA --- */
 .slide-btn-action {
     display: inline-block;
     padding: 12px 35px;
@@ -300,7 +303,7 @@ nav.main-nav {
     color: var(--white);
 }
 
-/* Khối dot điều hướng */
+/* --- Khối dot điều hướng --- */
 .dots-container {
     position: absolute; 
     bottom: 30px; 
@@ -316,7 +319,7 @@ nav.main-nav {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* Dot */
+/* --- Từng dot --- */
 .dot { 
     height: 12px; 
     width: 12px; 
@@ -326,23 +329,24 @@ nav.main-nav {
     transition: 0.3s; 
 }
 
-/* Dot active */
+/* --- Dot active --- */
 .dot.active { 
     background-color: var(--primary-orange); 
     transform: scale(1.2); 
 }
 
-
 /* =====================================================
-   INTRO SECTION – phần giới thiệu dưới slider
+   INTRO SECTION
    ===================================================== */
+
+/* --- Khối intro --- */
 .intro-section {
     padding: 80px 50px;
     background-color: var(--white);
     text-align: center;
 }
 
-/* Tiêu đề phần giới thiệu */
+/* --- Tiêu đề intro --- */
 .intro-title {
     font-size: 32px;
     font-weight: 900;
@@ -354,7 +358,7 @@ nav.main-nav {
     display: inline-block;
 }
 
-/* Gạch dưới tiêu đề */
+/* --- Gạch dưới tiêu đề intro --- */
 .intro-title::after {
     content: "";
     display: block;
@@ -365,7 +369,7 @@ nav.main-nav {
     border-radius: 2px;
 }
 
-/* Khối chứa 2 cột nội dung */
+/* --- Khối chứa 2 cột --- */
 .intro-content-wrapper {
     display: flex;
     justify-content: center;
@@ -375,7 +379,7 @@ nav.main-nav {
     text-align: justify;
 }
 
-/* Mỗi cột nội dung */
+/* --- Mỗi cột nội dung --- */
 .intro-text-col {
     flex: 1;
     font-size: 16px;
@@ -383,10 +387,11 @@ nav.main-nav {
     color: var(--text-light);
 }
 
-
 /* =====================================================
-   FEATURES GRID – 4 ô tính năng
+   FEATURES GRID
    ===================================================== */
+
+/* --- Lưới 4 ô tính năng --- */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -395,7 +400,7 @@ nav.main-nav {
     margin: 0 auto;
 }
 
-/* Hộp tính năng */
+/* --- Box tính năng --- */
 .feature-box {
     background-color: #fff;
     border: 1px solid var(--secondary-teal);
@@ -407,14 +412,14 @@ nav.main-nav {
     overflow: hidden;
 }
 
-/* Hiệu ứng hover */
+/* --- Box hover --- */
 .feature-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(131, 165, 165, 0.2);
     border-color: var(--primary-orange);
 }
 
-/* Icon bên trong box */
+/* --- Icon trong box --- */
 .feature-icon {
     font-size: 40px;
     color: var(--secondary-teal);
@@ -422,24 +427,24 @@ nav.main-nav {
     transition: 0.3s;
 }
 
-/* Icon đổi màu */
+/* --- Icon đổi màu khi hover box --- */
 .feature-box:hover .feature-icon {
     color: var(--primary-orange);
 }
 
-/* Text mô tả */
+/* --- Text mô tả box --- */
 .feature-text {
     font-size: 16px;
     font-weight: 600;
     color: var(--text-dark);
 }
 
-
 /* =====================================================
-   RESPONSIVE – điều chỉnh giao diện khi thu nhỏ màn hình
+   RESPONSIVE
    ===================================================== */
+
+/* --- Tablet --- */
 @media (max-width: 1024px) {
-    /* Điều chỉnh header + nav + slider + intro cho tablet */
     header, nav.main-nav { 
         padding: 20px; 
         flex-direction: column; 
@@ -477,8 +482,8 @@ nav.main-nav {
     }
 }
 
+/* --- Mobile --- */
 @media (max-width: 600px) {
-    /* Điều chỉnh cho điện thoại */
     .features-grid { 
         grid-template-columns: 1fr; 
     }
