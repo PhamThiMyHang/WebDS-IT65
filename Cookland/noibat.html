@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Accounts CookLand</title>
+
+    <!-- Font Awesome (icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- SECTION TOP ACCOUNTS -->
+    <section class="featured-accounts-section">
+        <div class="container">
+
+            <!-- TIÊU ĐỀ -->
+            <div class="section-header text-center">
+                <span class="sub-title">Cộng Đồng CookLand</span>
+                <h2 class="main-title">Top Đầu Bếp TRONG NĂM 2025</h2>
+                <div class="title-divider"></div>
+                <p class="section-desc">
+                    Những gương mặt vàng trong làng ẩm thực với những công thức sáng tạo nhất.
+                </p>
+            </div>
+
+            <!-- SLIDER NGOÀI -->
+            <div class="slider-wrapper">
+
+                <!-- Nút lùi slide -->
+                <button class="nav-btn prev-btn" id="prevBtn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <!-- KHUNG HIỂN THỊ SLIDE -->
+                <div class="slider-viewport">
+
+                    <!-- TRACK CHỨA 6 CARD -->
+                    <div class="slider-track" id="track">
+
+                        <!-- ===== CARD 1 ===== -->
+                        <div class="account-card">
+
+                            <!-- Huy hiệu Top 1 -->
+                            <div class="card-badge"><i class="fa-solid fa-crown"></i> Top 1</div>
+
+                            <!-- Ảnh avatar -->
+                            <div class="card-img-wrapper">
+                                <img src="https://i.pravatar.cc/150?img=5" alt="Avatar" class="user-avatar">
+                            </div>
+
+                            <!-- Thông tin -->
+                            <div class="card-info">
+                                <h3 class="user-name">Phan Anh Esheep</h3>
+                                <p class="user-handle">@esheepkitchen</p>
+                                <p class="user-bio">Yêu bếp, nghiện nhà và mê đồ ngọt.</p>
+
+                                <!-- Thống kê -->
+                                <div class="user-stats">
+
+                                    <div class="stat-item">
+                                        <span class="stat-num">520</span>
+                                        <span class="stat-label">Công thức</span>
+                                    </div>
+
+                                    <div class="stat-separator"></div>
+
+                                    <div class="stat-item">
+                                        <span class="stat-num">1.2M</span>
+                                        <span class="stat-label">Follower</span>
+                                    </div>
+
+                                </div>
+
+                                <!-- 3 ảnh món ăn -->
+                                <div class="mini-gallery">
+                                    <img src="anh1mon1.jpg" alt="img">
+                                    <img src="anh1mon2.jpeg" alt="img">
+                                    <img src="anh1mon3.jpg" alt="img">
+                                </div>
+
+                                <!-- Nút follow -->
+                                <button class="btn-follow" onclick="toggleFollow(this)">
+                                    <i class="fa-solid fa-plus"></i> Theo dõi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== CARD 2 ===== -->
+                        <div class="account-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://i.pravatar.cc/150?img=9" alt="Avatar" class="user-avatar">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="user-name">Dino Vũ</h3>
+                                <p class="user-handle">@dinovux</p>
+                                <p class="user-bio">Chuyên gia Eat Clean & Sống lành mạnh.</p>
+
+                                <div class="user-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-num">315</span>
+                                        <span class="stat-label">Công thức</span>
+                                    </div>
+
+                                    <div class="stat-separator"></div>
+
+                                    <div class="stat-item">
+                                        <span class="stat-num">890K</span>
+                                        <span class="stat-label">Follower</span>
+                                    </div>
+                                </div>
+
+                                <div class="mini-gallery">
+                                    <img src="anh2mon1.jpg" alt="img">
+                                    <img src="anh2mon2.jpg" alt="img">
+                                    <img src="anh2mon3.jpg" alt="img">
+                                </div>
+
+                                <button class="btn-follow" onclick="toggleFollow(this)">
+                                    <i class="fa-solid fa-plus"></i> Theo dõi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== CARD 3 ===== -->
+                        <div class="account-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://i.pravatar.cc/150?img=32" alt="Avatar" class="user-avatar">
+                            </div>
+
+                            <div class="card-info">
+                                <h3 class="user-name">Mẹ Bắp Béo</h3>
+                                <p class="user-handle">@mebapbeo_cook</p>
+                                <p class="user-bio">Cơm nhà chuẩn vị mẹ nấu.</p>
+
+                                <div class="user-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-num">800+</span>
+                                        <span class="stat-label">Công thức</span>
+                                    </div>
+
+                                    <div class="stat-separator"></div>
+
+                                    <div class="stat-item">
+                                        <span class="stat-num">450K</span>
+                                        <span class="stat-label">Follower</span>
+                                    </div>
+                                </div>
+
+                                <div class="mini-gallery">
+                                    <img src="anh3mon1.jpg" alt="img">
+                                    <img src="anh3mon2.jpg" alt="img">
+                                    <img src="anh3mon3.jpg" alt="img">
+                                </div>
+
+                                <button class="btn-follow" onclick="toggleFollow(this)">
+                                    <i class="fa-solid fa-plus"></i> Theo dõi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== CARD 4 ===== -->
+                        <div class="account-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://i.pravatar.cc/150?img=60" alt="Avatar" class="user-avatar">
+                            </div>
+
+                            <div class="card-info">
+                                <h3 class="user-name">Chef Tuấn Hải</h3>
+                                <p class="user-handle">@cheftuanhai</p>
+                                <p class="user-bio">Ẩm thực đường phố Việt Nam hiện đại.</p>
+
+                                <div class="user-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-num">150</span>
+                                        <span class="stat-label">Công thức</span>
+                                    </div>
+
+                                    <div class="stat-separator"></div>
+
+                                    <div class="stat-item">
+                                        <span class="stat-num">600K</span>
+                                        <span class="stat-label">Follower</span>
+                                    </div>
+                                </div>
+
+                                <div class="mini-gallery">
+                                    <img src="anh4mon1.jpg" alt="img">
+                                    <img src="anh4mon2.jpg" alt="img">
+                                    <img src="anh4mon3.jpg" alt="img">
+                                </div>
+
+                                <button class="btn-follow" onclick="toggleFollow(this)">
+                                    <i class="fa-solid fa-plus"></i> Theo dõi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== CARD 5 ===== -->
+                        <div class="account-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://i.pravatar.cc/150?img=44" alt="Avatar" class="user-avatar">
+                            </div>
+
+                            <div class="card-info">
+                                <h3 class="user-name">Helen's Recipes</h3>
+                                <p class="user-handle">@helenrecipes</p>
+                                <p class="user-bio">Món Việt từ căn bếp nhỏ đến thế giới.</p>
+
+                                <div class="user-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-num">620</span>
+                                        <span class="stat-label">Công thức</span>
+                                    </div>
+
+                                    <div class="stat-separator"></div>
+
+                                    <div class="stat-item">
+                                        <span class="stat-num">700K</span>
+                                        <span class="stat-label">Follower</span>
+                                    </div>
+                                </div>
+
+                                <div class="mini-gallery">
+                                    <img src="anh5mon1.jpg" alt="img">
+                                    <img src="anh5mon2.jpg" alt="img">
+                                    <img src="anh5mon3.jpg" alt="img">
+                                </div>
+
+                                <button class="btn-follow" onclick="toggleFollow(this)">
+                                    <i class="fa-solid fa-plus"></i> Theo dõi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== CARD 6 ===== -->
+                        <div class="account-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Avatar" class="user-avatar">
+                            </div>
+
+                            <div class="card-info">
+                                <h3 class="user-name">Nino's Home</h3>
+                                <p class="user-handle">@ninohome</p>
+                                <p class="user-bio">Nấu ăn phong cách ASMR và chú mèo.</p>
+
+                                <div class="user-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-num">200</span>
+                                        <span class="stat-label">Công thức</span>
+                                    </div>
+
+                                    <div class="stat-separator"></div>
+
+                                    <div class="stat-item">
+                                        <span class="stat-num">3M</span>
+                                        <span class="stat-label">Follower</span>
+                                    </div>
+                                </div>
+
+                                <div class="mini-gallery">
+                                    <img src="anh6mon1.jpg" alt="img">
+                                    <img src="anh6mon2.jpg" alt="img">
+                                    <img src="anh6mon3.jpg" alt="img">
+                                </div>
+
+                                <button class="btn-follow" onclick="toggleFollow(this)">
+                                    <i class="fa-solid fa-plus"></i> Theo dõi
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Nút tiến slide -->
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JS riêng -->
+    <script src="script.js"></script>
+</body>
+</html>
