@@ -1,0 +1,352 @@
+/* Reset cơ bản */
+* {
+    box-sizing: border-box;
+}
+
+/* Khai báo biến màu – dùng để tái sử dụng nhiều lần trong CSS */
+:root {
+    --primary-orange: #CC5500;  
+    --bg-cream: #FFF0D9;        
+    --secondary-teal: #83A5A5;  
+    --white: #ffffff;            
+    --text-dark: #333333;        
+    --text-light: #666666;      
+    --gray-bg: #f9f9f9;         
+}
+
+/* Section chứa toàn bộ phần "Tài khoản nổi bật" */
+.featured-accounts-section {
+    background-color: var(--bg-cream);
+    padding: 80px 0;                 
+    font-family: 'Roboto', sans-serif; 
+    position: relative;               
+    z-index: 1;                       
+}
+
+/* Container giới hạn chiều rộng nội dung */
+.featured-accounts-section .container {
+    max-width: 1200px; 
+    margin: 0 auto;    
+    padding: 0 20px;   
+}
+/* --- HEADER --- */
+
+/* Canh giữa toàn bộ nội dung có class này */
+.text-center { 
+    text-align: center; 
+}
+
+/* Dòng tiêu đề phụ (nhỏ, in đậm, màu xanh) */
+.sub-title { 
+    font-size: 14px; 
+    font-weight: 700; 
+    color: var(--secondary-teal); 
+    text-transform: uppercase;   /* Viết hoa toàn bộ */
+    letter-spacing: 2px;         /* Tăng khoảng cách giữa các chữ */
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+/* Tiêu đề chính (to, cam, cực đậm) */
+.main-title { 
+    font-size: 36px; 
+    font-weight: 900; 
+    color: var(--primary-orange); 
+    text-transform: uppercase;   /* Viết hoa */
+    margin: 0; 
+}
+
+/* Thanh gạch ngắn trang trí dưới tiêu đề */
+.title-divider {
+    width: 60px; 
+    height: 4px; 
+    background-color: var(--primary-orange); 
+    margin: 15px auto 20px auto; /* canh giữa */
+    border-radius: 2px; 
+}
+
+/* Đoạn mô tả nằm giữa, giới hạn chiều ngang 600px */
+.section-desc { 
+    max-width: 600px;           /* Không cho rộng quá */
+    margin: 0 auto 50px auto;   /* canh giữa + tạo khoảng cách dưới */
+    color: var(--text-light); 
+    font-size: 16px; 
+    line-height: 1.6;           /* Giãn dòng giúp dễ đọc */
+}
+
+/* --- SLIDER LAYOUT --- */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 10px; 
+}
+
+/* Khung nhìn (Viewport) */
+.slider-viewport {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    margin: -20px 0;
+}
+
+/* Đường ray (Track) */
+.slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+/* --- CARD TÀI KHOẢN --- */
+.account-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    
+    flex-shrink: 0; 
+    
+    /* (100% - 60px gap) / 4 card */
+    width: calc((100% - 60px) / 4);
+}
+
+.account-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(204, 85, 0, 0.15); 
+    border-color: rgba(204, 85, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Badge Top 1 */
+.card-badge {
+    position: absolute; 
+    top: 15px; right: 15px; 
+    background-color: #FFD700; 
+    color: #b45f06; 
+    font-size: 12px; 
+    font-weight: 700; 
+    padding: 4px 10px; 
+    border-radius: 12px; 
+    z-index: 2; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Ảnh đại diện Wrapper */
+.card-img-wrapper {
+    width: 100%; 
+    height: 100px;
+    background: linear-gradient(to bottom right, var(--secondary-teal), #a8dadc);
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end;
+    margin-bottom: 50px; 
+    position: relative;
+}
+
+/* Avatar */
+.user-avatar {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    object-fit: cover;
+    position: absolute; bottom: -45px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    pointer-events: none;
+}
+
+/* Thông tin Text: chứa toàn bộ phần chữ trong mỗi card */
+.card-info { 
+    text-align: center; 
+    padding: 0 15px; 
+    width: 100%; 
+}
+/* Tên người dùng */
+.user-name { 
+    font-size: 17px; 
+    font-weight: 700; 
+    color: var(--text-dark);
+     margin: 0 0 5px 0; 
+    }
+    /* Username / handle (dạng @abcxyz) */
+.user-handle { 
+    font-size: 13px; 
+    color: var(--secondary-teal); 
+    font-weight: 500; 
+    margin-bottom: 10px; 
+}
+
+/* Bio (Mô tả) - ĐÃ FIX WARNING Ở ĐÂY */
+.user-bio {
+    font-size: 13px; 
+    color: var(--text-light);
+    line-height: 1.4; 
+    margin-bottom: 15px;
+    min-height: 38px;
+    
+    /* Cấu hình cắt chữ nếu quá dài (3 chấm...) */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Dành cho Chrome, Safari cũ */
+    line-clamp: 2;         /* Chuẩn mới (Thêm vào để hết báo lỗi vàng) */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Khối thống kê số liệu (bài viết, theo dõi, lượt thích) */
+.user-stats {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+    background-color: var(--gray-bg);
+    padding: 8px; 
+    border-radius: 8px;
+    width: 100%;
+}
+/* Mỗi mục thống kê */
+.stat-item { 
+    text-align: center; 
+    flex: 1; 
+}
+/* Số lượng (con số chính) */
+.stat-num { 
+    display: block; 
+    font-weight: 700; 
+    color: var(--primary-orange); 
+    font-size: 14px; 
+}
+/* Nhãn mô tả (Posts / Followers / Likes) */
+.stat-label { 
+    font-size: 10px; 
+    color: var(--text-light); 
+    text-transform: uppercase; 
+    margin-top: 2px; 
+}
+/* Thanh kẻ phân cách giữa các mục */
+.stat-separator { 
+    width: 1px; 
+    height: 20px; 
+    background-color: #ddd;
+    margin: 0 10px; 
+}
+/* Bộ sưu tập mini hình ảnh trong card */
+.mini-gallery { 
+    display: flex; 
+    justify-content: center; 
+    gap: 6px; 
+    margin-bottom: 20px; 
+}
+
+/* Ảnh nhỏ trong mini-gallery */
+.mini-gallery img { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 6px; 
+    object-fit: cover; 
+    pointer-events: none; 
+}
+
+/* Nút Theo dõi chính */
+.btn-follow {
+    background-color: var(--white); 
+    color: var(--primary-orange);
+    border: 2px solid var(--primary-orange);
+    padding: 6px 0; 
+    width: 100%;
+    border-radius: 25px; 
+    font-size: 13px; 
+    font-weight: 700;
+    cursor: pointer; 
+    transition: all 0.3s; 
+    outline: none;
+}
+
+/* Khi hover vào nút Theo dõi */
+.btn-follow:hover { 
+    background-color: var(--primary-orange); 
+    color: var(--white); 
+    box-shadow: 0 4px 10px rgba(204, 85, 0, 0.3); 
+}
+
+/* Trạng thái đã theo dõi */
+.btn-follow.following { 
+    background-color: var(--secondary-teal); 
+    border-color: var(--secondary-teal); 
+    color: var(--white); 
+}
+
+/* Nút điều hướng slider */
+.nav-btn {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 45px; 
+    height: 45px;
+    background-color: var(--white); 
+    color: var(--primary-orange);
+    border: 1px solid #eee; 
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer; 
+    font-size: 18px;
+    z-index: 10;
+    transition: 0.3s;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Hover vào nút điều hướng */
+.nav-btn:hover { 
+    background-color: var(--primary-orange); 
+    color: var(--white); 
+    transform: translateY(-50%) scale(1.1); 
+    border-color: var(--primary-orange); 
+}
+
+/* Nút trái */
+.prev-btn { 
+    left: -45px; 
+}
+
+/* Nút phải */
+.next-btn { 
+    right: -45px; 
+}
+
+/* Responsive 1100px: thu nút sát vào slider */
+@media (max-width: 1100px) {
+    /* Nút trái */
+    .prev-btn { 
+        left: -10px; 
+    }
+    /* Nút phải */
+    .next-btn { 
+        right: -10px; 
+    }
+}
+
+/* Responsive 1024px: chia card thành 2 cột */
+@media (max-width: 1024px) {
+    /* Card tài khoản */
+    .account-card {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+/* Responsive 600px: 1 cột, ẩn nút điều hướng */
+@media (max-width: 600px) {
+    /* Card tài khoản */
+    .account-card {
+        width: 100%;
+    }
+    /* Ẩn nút điều hướng */
+    .nav-btn { display: none; }
+
+    /* Xóa padding của slider để rộng hơn */
+    .slider-wrapper { padding: 0; }
+}
