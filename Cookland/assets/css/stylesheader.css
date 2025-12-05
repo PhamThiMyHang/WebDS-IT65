@@ -440,54 +440,120 @@ nav.main-nav {
 }
 
 /* =====================================================
-   RESPONSIVE
+   RESPONSIVE (CHỈNH SỬA LẠI CHO ĐIỆN THOẠI)
    ===================================================== */
 
-/* --- Tablet --- */
+/* --- Tablet & Mobile chung (Màn hình nhỏ hơn 1024px) --- */
 @media (max-width: 1024px) {
-    header, nav.main-nav { 
-        padding: 20px; 
-        flex-direction: column; 
-        height: auto; 
-        gap: 15px; 
+    /* Header co gọn lại */
+    header {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
     }
-    .header-right { 
-        flex-direction: column-reverse; 
-        width: 100%; 
+
+    /* Logo nhỏ lại chút */
+    .logo-container img {
+        height: 60px;
     }
-    .search-container input { 
-        width: 100%; 
+    .logo-text {
+        font-size: 28px;
     }
-    .nav-menu { 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        margin-right: 0; 
+
+    /* Đưa ô tìm kiếm lên trên, icon mxh xuống dưới */
+    .header-right {
+        width: 100%;
+        flex-direction: column-reverse; /* Đảo ngược để tìm kiếm lên trên icon nếu muốn, hoặc giữ nguyên */
+        gap: 15px;
     }
-    .hero-slider { 
-        height: 400px; 
+
+    .search-container input {
+        width: 100%; /* Ô tìm kiếm full màn hình */
     }
-    .slide-title { 
-        font-size: 30px; 
+
+    /* Navbar: Cho phép xuống dòng và CÁCH RA */
+    nav.main-nav {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
     }
-    .slide-subtitle { 
-        font-size: 14px; 
+
+    .nav-menu {
+        flex-wrap: wrap; /* Cho phép xuống dòng */
+        justify-content: center;
+        margin-right: 0;
+        gap: 10px 20px; /* Quan trọng: Cách dòng 10px, cách chữ 20px để không bị dính */
+        margin-bottom: 10px;
     }
-    .intro-content-wrapper { 
-        flex-direction: column; 
-        gap: 20px; 
-        text-align: left; 
-    }
-    .features-grid { 
-        grid-template-columns: repeat(2, 1fr); 
+    
+    /* Chỉnh lại nút đăng nhập cho đỡ sát */
+    .login-btn {
+        width: auto;
+        margin-top: 5px;
     }
 }
 
-/* --- Mobile --- */
+/* --- Mobile riêng (Màn hình nhỏ hơn 600px - Điện thoại) --- */
 @media (max-width: 600px) {
-    .features-grid { 
-        grid-template-columns: 1fr; 
+    /* Header gọn hơn nữa */
+    .logo-container {
+        transform: scale(0.9); /* Thu nhỏ logo */
     }
-    .hero-slider { 
-        height: 350px; 
+    
+    .logo-text {
+        font-size: 24px; /* Chữ logo nhỏ lại */
+    }
+
+    /* Ẩn bớt icon mạng xã hội trên điện thoại cho đỡ rối (tùy chọn) 
+       hoặc chỉ thu nhỏ padding */
+    .social-icons {
+        gap: 15px;
+    }
+
+    /* Slider: Giảm chiều cao và kích thước chữ */
+    .hero-slider {
+        height: 400px; /* Tăng chiều cao xíu để chứa đủ chữ */
+    }
+
+    .slide img {
+        filter: brightness(0.5); /* Tối ảnh hơn chút để chữ trắng dễ đọc */
+    }
+
+    .slide-content {
+        width: 95%; /* Nội dung rộng ra sát mép màn hình */
+    }
+
+    .slide-subtitle {
+        font-size: 12px;
+        padding: 4px 10px;
+        margin-bottom: 10px;
+    }
+
+    .slide-title {
+        font-size: 24px; /* Giảm size chữ tiêu đề mạnh tay */
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+
+    .slide-btn-action {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    /* Grid tính năng: Xếp 1 cột */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Text giới thiệu */
+    .intro-title {
+        font-size: 24px;
+    }
+    
+    .intro-content-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
     }
 }
