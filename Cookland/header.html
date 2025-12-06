@@ -8,32 +8,24 @@
     <!-- Link icon FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Google Fonts Roboto -->
+    <!-- Link Google Fonts (Roboto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- File CSS của header -->
+    <!-- Liên kết đến file CSS -->
     <link rel="stylesheet" href="assets/css/stylesheader.css">
 </head>
 <body>
 
-    <!-- ============================
-         HEADER
-         ============================ -->
+    <!-- HEADER -->
     <header>
-
-        <!-- Logo + chữ CookLand -->
-        <div class="logo-container">
-            <img src="assets/images/anh1.jpg" alt="Logo">
-            <span class="logo-text">CookLand</span>
-        </div>
-
-        <!-- Mạng xã hội + ô tìm kiếm -->
+       <div class="logo-container">
+    <img src="assets/images/anh1.jpg" alt="Logo">
+    <span class="logo-text">CookLand</span>
+</div>
         <div class="header-right">
-
-            <!-- Icon mạng xã hội -->
-            <div class="social-icons">
+           <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -41,21 +33,15 @@
                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </div>
 
-            <!-- Ô tìm kiếm -->
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Tìm kiếm...">
                 <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-
         </div>
     </header>
 
-    <!-- ============================
-         THANH NAVBAR
-         ============================ -->
+    <!-- NAVBAR -->
     <nav class="main-nav">
-
-        <!-- Menu điều hướng -->
         <ul class="nav-menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">Công thức</a></li>
@@ -64,23 +50,17 @@
             <li><a href="#">Cộng đồng</a></li>
             <li><a href="#">Liên hệ</a></li>
         </ul>
-
-        <!-- Nút đăng nhập -->
-        <a href="DangNhap.html" class="login-btn">
+        <a href="#" class="login-btn">
             <i class="fa-solid fa-user"></i> Đăng nhập
         </a>
-
     </nav>
 
-    <!-- ============================
-         HERO SLIDER (3 SLIDE)
-         ============================ -->
+    <!-- HERO SLIDER -->
     <section class="hero-slider">
-
+        
         <!-- SLIDE 1 -->
         <div class="slide active">
             <img src="assets/images/anh2.jpg" alt="Food 1">
-
             <div class="slide-content">
                 <h3 class="slide-subtitle">CÔNG THỨC MỚI</h3>
                 <h2 class="slide-title">MÓN ĂN HOT TRONG TUẦN</h2>
@@ -91,59 +71,52 @@
         <!-- SLIDE 2 -->
         <div class="slide">
             <img src="assets/images/anh3.jpg" alt="Food 2">
-
             <div class="slide-content">
                 <h3 class="slide-subtitle">MÓN NGON MỖI NGÀY</h3>
-                <h2 class="slide-title">CÔNG THỨC DỄ LÀM - NGON MIỆNG</h2>
+                <h2 class="slide-title">CÔNG THỨC DỄ LÀM – NGON MIỆNG</h2>
                 <a href="#" class="slide-btn-action">VÀO BẾP CÙNG CHÚNG TÔI</a>
             </div>
         </div>
 
         <!-- SLIDE 3 -->
         <div class="slide">
-            <img src="assets/images/anh4.jpg" alt="Food 3">
-
+           <img src="assets/images/anh4.jpg" alt="Food 3">
             <div class="slide-content">
                 <h3 class="slide-subtitle">GỢI Ý HÔM NAY</h3>
-                <h2 class="slide-title">MÂM CƠM ĐƠN GIẢN - ẤM CÚNG</h2>
+                <h2 class="slide-title">MÂM CƠM ĐƠN GIẢN – ẤM CÚNG</h2>
                 <a href="#" class="slide-btn-action">BẮT ĐẦU NẤU NGAY</a>
             </div>
         </div>
 
-        <!-- Dots chuyển slide -->
         <div class="dots-container"> 
             <span class="dot active" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-
     </section>
 
-    <!-- ============================
-         PHẦN GIỚI THIỆU + TÍNH NĂNG
-         ============================ -->
+    <!-- PHẦN GIỚI THIỆU & TÍNH NĂNG -->
     <section class="intro-section">
-
-        <!-- Tiêu đề chính -->
+        
+        <!-- Tiêu đề -->
         <h2 class="intro-title">
             Cookland - Nền tảng chia sẻ công thức nấu ăn uy tín
         </h2>
 
-        <!-- Đoạn mô tả 2 cột -->
+        <!-- Nội dung text 2 cột -->
         <div class="intro-content-wrapper">
             <div class="intro-text-col">
-               Trang web Cookland là nơi chia sẻ những công thức nấu ăn uy tín, dễ hiểu và đa dạng, giúp người dùng tự tin sáng tạo trong căn bếp của mình. Chúng tôi cam kết mang đến những giá trị thực, từ những món ăn truyền thống đậm đà bản sắc đến những món Á - Âu hiện đại.
+                Trang web Cookland là nơi chia sẻ những công thức nấu ăn uy tín, dễ hiểu và đa dạng, giúp người dùng tự tin sáng tạo trong căn bếp của mình. Chúng tôi cam kết mang đến những giá trị thực, từ những món ăn truyền thống đậm đà bản sắc đến những món Á - Âu hiện đại.
             </div>
-
             <div class="intro-text-col">
                 Tại đây, bạn không chỉ học cách nấu ngon mà còn khám phá bí quyết, mẹo vặt và câu chuyện đằng sau mỗi món ăn đầy cảm hứng. Cộng đồng của chúng tôi luôn sẵn sàng hỗ trợ bạn bất cứ lúc nào để bữa cơm gia đình thêm phần ấm cúng.
             </div>
         </div>
 
-        <!-- Lưới tính năng 4 cột -->
+        <!-- 4 Hộp Tính Năng -->
         <div class="features-grid">
-
-            <!-- Tính năng 1 -->
+            
+            <!-- Box 1 -->
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fa-regular fa-clock"></i>
@@ -151,7 +124,7 @@
                 <p class="feature-text">Công thức 100%<br>thời gian thực</p>
             </div>
 
-            <!-- Tính năng 2 -->
+            <!-- Box 2 -->
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fa-solid fa-user-check"></i>
@@ -159,7 +132,7 @@
                 <p class="feature-text">Nguyên liệu được<br>kiểm duyệt kỹ</p>
             </div>
 
-            <!-- Tính năng 3 -->
+            <!-- Box 3 -->
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fa-solid fa-headset"></i>
@@ -167,7 +140,7 @@
                 <p class="feature-text">Hỗ trợ tư vấn<br>24/7</p>
             </div>
 
-            <!-- Tính năng 4 -->
+            <!-- Box 4 -->
             <div class="feature-box">
                 <div class="feature-icon">
                     <i class="fa-solid fa-map-location-dot"></i>
@@ -179,10 +152,7 @@
 
     </section>
 
-    <!-- ============================
-         LINK JS
-         ============================ -->
+    <!-- Liên kết đến file Javascript -->
     <script src="assets/js/scriptheader.js"></script>
-
 </body>
 </html>
