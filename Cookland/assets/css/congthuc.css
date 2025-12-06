@@ -1,0 +1,364 @@
+/* ==================== BIẾN MÀU CHUNG CHO TOÀN BỘ TRANG ==================== */
+/* Dùng :root để khai báo biến màu – chỉ cần thay 1 chỗ là đổi cả web */
+:root {
+    --cam: #C55000;     /* Màu cam chủ đạo – ấm áp, hợp chủ đề nấu ăn */
+    --light: #FFF3E0;   /* Màu nền kem nhẹ – không chói mắt */
+    --border: #e8e0d8;  /* Màu viền nhẹ cho thanh tìm kiếm */
+}
+
+/* ==================== RESET CSS – XÓA KHOẢNG CÁCH MẶC ĐỊNH ==================== */
+/* Giúp mình dễ kiểm soát layout, không bị lề thừa từ trình duyệt */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; /* Chiều rộng bao gồm cả padding + border */
+}
+
+/* ==================== THIẾT LẬP CHỮ CHUNG CHO TOÀN TRANG ==================== */
+body {
+    font-family: 'Roboto', sans-serif;     /* Chữ hiện đại, dễ đọc */
+    background: var(--light);              /* Nền kem nhẹ */
+    color: #333;                           /* Màu chữ tối, dễ nhìn */
+    line-height: 1.6;                      /* Khoảng cách dòng thoải mái */
+}
+h1,h2,h3,h4,h5 { 
+    font-family: 'Playfair Display', serif; /* Chữ tiêu đề sang trọng */
+    color: var(--cam);                       /* Màu cam nổi bật */
+}
+
+/* ==================== CONTAINER – GIỚI HẠN ĐỘ RỘNG TRANG ==================== */
+.container { 
+    max-width: 1400px;    /* Trang rộng tối đa 1400px */
+    margin: 0 auto;       /* Căn giữa trang */
+    padding: 0 20px;      /* Khoảng cách 2 bên trên điện thoại */
+}
+
+/* ==================== TIÊU ĐỀ TRANG ==================== */
+.page-header { 
+    text-align: center; 
+    padding: 60px 0 40px; /* Khoảng cách trên/dưới */
+}
+.page-title { 
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+}
+.page-subtitle { 
+    color: #888; 
+    font-size: 1.1rem; 
+}
+
+/* ==================== THANH TÌM KIẾM ĐẸP NHƯ COOKPAD ==================== */
+.search-center { 
+    max-width: 680px; 
+    margin: 0 auto 50px;   /* Căn giữa + cách dưới 50px */
+}
+.search-box {
+    background: white;
+    border-radius: 50px;               /* Bo tròn như viên thuốc */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Bóng đổ nhẹ, nổi khối */
+    overflow: hidden;
+    display: flex;                     /* Input + nút nằm ngang */
+    border: 3px solid var(--border);   /* Viền nhẹ màu kem */
+}
+.search-box input {
+    flex: 1;                           /* Chiếm hết chỗ trống */
+    padding: 18px 25px;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+}
+.search-box button {
+    background: var(--cam);
+    color: white;
+    border: none;
+    width: 60px; height: 60px;
+    border-radius: 50%;                /* Nút tìm kiếm tròn */
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin: 6px;
+}
+
+/* ==================== NÚT ĐIỀU KHIỂN TRÊN CÙNG (TAB + NÚT THÊM) ==================== */
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;                   /* Xuống dòng nếu không đủ chỗ */
+    gap: 15px;
+}
+
+/* Tab: Tất cả / Yêu thích */
+.tabs-group {
+    display: flex;
+    gap: 12px;
+    background: white;
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(197,80,0,0.15);
+}
+.tab-btn {
+    padding: 12px 28px;
+    border: none;
+    background: transparent;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s;
+}
+.tab-btn.active {
+    background: var(--cam);
+    color: white;
+}
+.badge {
+    background: #e74c3c;               /* Màu đỏ cho số lượng yêu thích */
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 6px;
+}
+
+/* Nút thêm công thức */
+.btn-add-recipe {
+    background: var(--cam);
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(197,80,0,0.2);
+}
+
+/* ==================== LAYOUT 2 CỘT: LỌC + DANH SÁCH ==================== */
+.content-wrapper { 
+    display: flex; 
+    gap: 40px;                         /* Khoảng cách giữa 2 cột */
+}
+
+/* ==================== SIDEBAR – BỘ LỌC BÊN TRÁI ==================== */
+.sidebar {
+    flex: 0 0 300px;                   /* Rộng cố định 300px */
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(197,80,0,0.12);
+    position: sticky;                  /* Dính ở trên khi cuộn trang */
+    top: 20px;
+    height: fit-content;
+}
+.filter-title { 
+    font-size: 1.6rem; 
+    margin-bottom: 25px; 
+    text-align: center; 
+}
+.filter-group h4 { 
+    margin: 25px 0 12px; 
+    font-size: 1.1rem; 
+    color: #555; 
+}
+.filter-group label { 
+    display: block; 
+    margin: 12px 0; 
+    font-size: 0.98rem; 
+    cursor: pointer; 
+}
+.filter-group input[type=checkbox] { 
+    margin-right: 10px; 
+    accent-color: var(--cam);          /* Màu cam khi tick */
+}
+.btn-apply, .btn-reset {
+    width: 100%; 
+    padding: 14px; 
+    border: none; 
+    border-radius: 50px;
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-top: 20px;
+}
+.btn-apply { background: var(--cam); color: white; }
+.btn-reset { background: #f5f5f5; color: #777; }
+
+/* ==================== DANH SÁCH CÔNG THỨC – CHỈ CÓ KIỂU NGANG-DỌC ==================== */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr;        /* Chỉ 1 cột */
+    gap: 28px;                         /* Khoảng cách giữa các card */
+    width: 100%;
+}
+
+/* Card công thức – kiểu ngang dọc (ảnh trái, chữ phải) */
+.card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(197,80,0,0.12);
+    transition: all .4s;
+    cursor: pointer;
+    height: 260px;                     /* Chiều cao cố định */
+}
+.card:hover {
+    transform: translateY(-10px);      /* Nhấc lên khi di chuột */
+    box-shadow: 0 20px 40px rgba(197,80,0,0.2);
+}
+
+/* Ảnh bên trái */
+.card-img-wrapper {
+    width: 300px;
+    height: 100%;
+    flex-shrink: 0;                    /* Không co lại */
+}
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                 /* Ảnh đầy khung, không méo */
+    /* Ảnh mặc định nếu lỗi hoặc không có ảnh */
+    background: #f5e6d8 url('https://images.unsplash.com/photo-1547573854-74d2a71d0826?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+}
+
+/* Phần chữ bên phải */
+.card-body {
+    flex: 1;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    /* Đẩy nút xuống dưới */
+}
+.card-body h5 {
+    font-size: 1.55rem;
+    margin-bottom: 10px;
+    color: var(--cam);
+}
+.info {
+    color: #888;
+    font-size: 0.98rem;
+    margin-bottom: 12px;
+}
+.info i { margin-right: 6px; }
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+.card-actions button {
+    background: none;
+    border: none;
+    color: var(--cam);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.heart {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all .3s;
+}
+.heart.loved {
+    color: #e74c3c !important;
+    animation: beat .6s;               /* Hiệu ứng tim đập */
+}
+@keyframes beat { 
+    0%,100% { transform: scale(1); } 
+    50% { transform: scale(1.4); } 
+}
+
+/* ==================== CỬA SỔ MODAL (XEM CHI TIẾT, THÊM MÓN) ==================== */
+.modal { 
+    display: none; 
+    position: fixed; 
+    inset: 0; 
+    background: rgba(0,0,0,.7); 
+    z-index: 1000;
+    align-items: center; 
+    justify-content: center; 
+}
+.modal.show { display: flex; }
+.modal-content {
+    background: white;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.modal-header {
+    background: var(--cam);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close { 
+    font-size: 2.8rem; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+.modal-body {
+    padding: 30px;
+    max-height: 65vh;
+    overflow-y: auto;                  /* Cuộn dọc nếu nội dung dài */
+}
+.modal-body img { 
+    width: 100%; 
+    border-radius: 16px; 
+    margin-bottom: 20px; 
+}
+#addForm input, #addForm select, #addForm textarea {
+    width: 100%; 
+    padding: 14px; 
+    margin-bottom: 18px; 
+    border: 1px solid #ddd; 
+    border-radius: 12px; 
+    font-family: inherit;
+}
+.btn-submit {
+    background: var(--cam); 
+    color: white; 
+    border: none; 
+    padding: 16px; 
+    border-radius: 50px;
+    width: 100%; 
+    font-weight: bold; 
+    cursor: pointer; 
+    font-size: 1.1rem;
+}
+
+/* ==================== RESPONSIVE – ĐẸP TRÊN ĐIỆN THOẠI ==================== */
+@media (max-width: 992px) {
+    .content-wrapper { 
+        flex-direction: column;        /* Dưới 992px: lọc lên trên, danh sách xuống dưới */
+    }
+    .sidebar { 
+        order: -1; 
+        position: static; 
+    }
+    .top-controls { 
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+    .tabs-group { justify-content: center; }
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;        /* Trên điện thoại: ảnh trên, chữ dưới */
+        height: auto;
+        text-align: center;
+    }
+    .card-img-wrapper { 
+        width: 100%; 
+        height: 240px; 
+    }
+    .card-body { padding: 24px; }
+}
+@media (max-width: 600px) {
+    .page-title { font-size: 2.4rem; }
+    .btn-add-recipe { width: 100%; }
+}

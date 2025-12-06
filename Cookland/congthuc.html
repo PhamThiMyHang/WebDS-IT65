@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookLand - Công thức nấu ăn</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/congthuc.css">
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Công thức nấu ăn</h1>
+            <p class="page-subtitle">Tìm kiếm và chia sẻ những công thức ngon nhất từ cộng đồng CookLand</p>
+
+            <div class="search-center">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm công thức... (phở, salad, bánh, bún...)">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <!-- Chỉ còn Tab + Nút thêm (xóa nút Grid/List) -->
+            <div class="top-controls">
+                <div class="tabs-group">
+                    <button class="tab-btn active" onclick="showTab('all')">Tất cả công thức</button>
+                    <button class="tab-btn" onclick="showTab('favorite')">
+                        Yêu thích <span id="favCount" class="badge">0</span>
+                    </button>
+                </div>
+                <button class="btn-add-recipe" onclick="openModal('addModal')">
+                    + Thêm công thức
+                </button>
+            </div>
+
+            <div class="content-wrapper">
+                <aside class="sidebar">
+                    <h3 class="filter-title">Bộ lọc</h3>
+                    <div class="filter-group">
+                        <h4>Phong cách</h4>
+                        <label><input type="checkbox" value="vietnam"> Việt Nam</label>
+                        <label><input type="checkbox" value="au"> Âu</label>
+                        <label><input type="checkbox" value="an-do"> Ấn Độ</label>
+                        <label><input type="checkbox" value="han-nhat"> Hàn - Nhật</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Chế độ ăn</h4>
+                        <label><input type="checkbox" value="healthy"> Healthy</label>
+                        <label><input type="checkbox" value="an-chay"> Ăn chay</label>
+                        <label><input type="checkbox" value="eat-clean"> Eat Clean</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Độ khó</h4>
+                        <label><input type="checkbox" value="de"> Dễ</label>
+                        <label><input type="checkbox" value="trung-binh"> Trung bình</label>
+                        <label><input type="checkbox" value="kho"> Khó</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Thời gian nấu</h4>
+                        <label><input type="checkbox" value="15"> < 15 phút</label>
+                        <label><input type="checkbox" value="30"> 15-30 phút</label>
+                        <label><input type="checkbox" value="60"> 30-60 phút</label>
+                        <label><input type="checkbox" value="60+"> > 60 phút</label>
+                    </div>
+                    <button class="btn-apply">Áp dụng</button>
+                    <button class="btn-reset">Xóa lọc</button>
+                </aside>
+
+                <section class="recipes-section">
+                    <!-- Chỉ dùng List view -->
+                    <div class="recipe-grid list-view" id="recipeList"></div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal chi tiết -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="detailTitle"></h2>
+                <span class="close" onclick="closeModal('detailModal')">×</span>
+            </div>
+            <div class="modal-body" id="detailBody"></div>
+        </div>
+    </div>
+
+    <!-- Modal thêm công thức -->
+    <div class="modal" id="addModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Thêm công thức mới</h2>
+                <span class="close" onclick="closeModal('addModal')">×</span>
+            </div>
+            <div class="modal-body">
+                <form id="addForm">
+                    <input type="text" placeholder="Tên món ăn (bắt buộc)" required>
+                    <input type="url" placeholder="Link ảnh (để trống dùng ảnh mặc định)">
+                    <input type="text" placeholder="Thời gian nấu (vd: 30 phút)" required>
+                    <select required>
+                        <option value="" disabled selected>Chọn độ khó</option>
+                        <option>Dễ</option>
+                        <option>Trung bình</option>
+                        <option>Khó</option>
+                    </select>
+                    <textarea rows="5" placeholder="Nguyên liệu (mỗi dòng 1 nguyên liệu)" required></textarea>
+                    <textarea rows="6" placeholder="Cách làm (mỗi dòng 1 bước)" required></textarea>
+                    <button type="submit" class="btn-submit">Chia sẻ công thức</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="assets/js/congthuc.js"></script>
+</body>
+</html>
