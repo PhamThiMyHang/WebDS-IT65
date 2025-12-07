@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết mẹo vặt - Cookland</title>
+  <link rel="stylesheet" href="assets/css/tip.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="header"></div>
+  <header class="header">
+    <h1 class="title">Cookland</h1>
+    <a href="tips.html" class="back-link" id="smartBack">← Quay lại danh sách mẹo</a>
+  </header>
+
+  <main class="wrap">
+    <div id="recipeContainer" class="recipe-box">
+    
+    </div>
+  </main>
+  <div id="footer"></div>
+<div id="header"></div>
+<div id="footer"></div>
+
+<script>
+fetch('header.html').then(r=>r.text()).then(html=>{
+  document.getElementById('header').innerHTML = html;
+  // thêm active menu ở đây
+});
+fetch('footer.html').then(r=>r.text()).then(html=>{
+  document.getElementById('footer').innerHTML = html;
+});
+</script>
+  <script src="assets/js/tip.js"></script>
+</body>
+</html>
