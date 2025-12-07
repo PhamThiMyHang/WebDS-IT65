@@ -491,3 +491,18 @@ nav.main-nav {
         height: 350px; 
     }
 }
+/* Menu active - sáng khi ở trang tương ứng */
+.nav-link {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+.nav-link.active,
+.nav-link:hover {
+  background: #f6f3f1; /* cam sáng */
+  color: white !important; /* override màu */
+  box-shadow: 0 4px 12px rgba(204, 85, 0, 0.3);
+}

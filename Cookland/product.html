@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Công thức nấu ăn — Cookland</title>
+  <link rel="stylesheet" href="assets/css/product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header"></div>
+  <header class="header">
+    <h1 class="title">Công thức nấu ăn</h1>
+    <p class="subtitle">Tìm kiếm và chia sẻ những công thức ngon nhất từ cộng đồng Cookland</p>
+    <div class="search-box">
+      <input id="searchInput" placeholder="Tìm kiếm công thức...">
+      <button class="search-icon">Search</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <aside class="filter-box">
+      <h3>Bộ lọc</h3>
+      
+      <!-- Thay toàn bộ phần filter bằng đoạn này -->
+<div class="filter-group">
+  <p class="fg-title">Phong cách</p>
+  <label><input type="radio" name="style" value="Việt Nam"> Việt Nam</label>
+  <label><input type="radio" name="style" value="Âu"> Âu</label>
+  <label><input type="radio" name="style" value="Hàn Quốc"> Hàn Quốc</label>
+  <label><input type="radio" name="style" value="Nhật Bản"> Nhật Bản</label>
+</div>
+
+<div class="filter-group">
+  <p class="fg-title">Chế độ ăn</p>
+  <label><input type="radio" name="diet" value="Healthy"> Healthy / Eat Clean</label>
+  <label><input type="radio" name="diet" value="Ăn chay được"> Ăn chay được</label>
+  <label><input type="radio" name="diet" value="Vegan"> Vegan</label>
+</div>
+
+<div class="filter-group">
+  <p class="fg-title">Thời gian nấu</p>
+  <label><input type="radio" name="time" value="<15 phút"> &lt;15 phút</label>
+  <label><input type="radio" name="time" value="<30 phút"> &lt;30 phút</label>
+  <label><input type="radio" name="time" value="30-60 phút"> 30–60 phút</label>
+  <label><input type="radio" name="time" value=">60 phút"> &gt;60 phút</label>
+</div>
+
+      <div class="filter-actions">
+        <button id="applyFilter">Áp dụng</button>
+        <button id="clearFilter" class="clear-btn">Xóa bộ lọc</button>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div id="recipesContainer"></div>
+
+      <!-- Phân trang -->
+      <div class="pagination">
+        <button id="prevBtn" disabled>&lt; Trước</button>
+        <div id="pageNumbers"></div>
+        <button id="nextBtn">Sau &gt;</button>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+<div id="header"></div>
+<div id="footer"></div>
+
+<script>
+fetch('header.html').then(r=>r.text()).then(html=>{
+  document.getElementById('header').innerHTML = html;
+  // thêm active menu ở đây
+});
+fetch('footer.html').then(r=>r.text()).then(html=>{
+  document.getElementById('footer').innerHTML = html;
+});
+</script>
+  <script src="assets/js/product.js"></script>
+</body>
+</html>

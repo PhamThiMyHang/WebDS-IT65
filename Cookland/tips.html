@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mẹo vặt & Kinh nghiệm nấu ăn — Cookland</title>
+  <link rel="stylesheet" href="assets/css/tips.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+ <div id="header"></div>
+<header class="header">
+  <h1 class="title">Mẹo vặt & Kinh nghiệm nấu ăn</h1>
+  <p class="subtitle">Tìm kiếm và chia sẻ mẹo hay nhất từ cộng đồng Cookland</p>
+  <div class="search-box">
+    <input id="searchInput" placeholder="Tìm kiếm mẹo vặt...">
+    <button class="search-icon">Search</button>
+  </div>
+</header>
+
+<main class="wrap">
+ <aside class="filter-box">
+  <h3>Bộ lọc</h3>
+  
+  <div class="filter-group">
+    <p class="fg-title">Loại mẹo</p>
+    <label><input type="checkbox" name="type" value="khửmùi"> Khử mùi</label>
+    <label><input type="checkbox" name="type" value="bảooquản"> Bảo quản</label>
+    <label><input type="checkbox" name="type" value="review"> Review dụng cụ</label>
+    <label><input type="checkbox" name="type" value="nấuăn"> Nấu ăn</label>
+  </div>
+
+  <div class="filter-group">
+    <p class="fg-title">Độ dễ</p>
+    <label><input type="checkbox" name="level" value="dễlàm"> Dễ làm</label>
+    <label><input type="checkbox" name="level" value="nhanhgọn"> Nhanh gọn</label>
+    <label><input type="checkbox" name="level" value="an toàn"> An toàn</label>
+  </div>
+
+  <div class="filter-actions">
+    <button id="applyFilter">Áp dụng</button>
+    <button id="clearFilter" class="clear-btn">Xóa bộ lọc</button>
+  </div>
+</aside>
+  <section class="content">
+    <div id="tipsList" class="tips-list"></div>
+
+    <div class="pagination">
+      <button id="prevBtn" disabled>Trước</button>
+      <div id="pageNumbers"></div>
+      <button id="nextBtn">Sau</button>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
+<div id="header"></div>
+<div id="footer"></div>
+
+<script>
+fetch('header.html').then(r=>r.text()).then(html=>{
+  document.getElementById('header').innerHTML = html;
+  // thêm active menu ở đây
+});
+fetch('footer.html').then(r=>r.text()).then(html=>{
+  document.getElementById('footer').innerHTML = html;
+});
+</script>
+<script src="assets/js/tips.js"></script>
+</body>
+</html>
