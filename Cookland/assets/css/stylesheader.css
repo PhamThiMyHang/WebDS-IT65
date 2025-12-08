@@ -172,7 +172,17 @@ nav.main-nav {
 
 .nav-menu li a:hover { color: var(--bg-cream); }
 .nav-menu li a:hover::after { width: 100%; }
+/* --- Trạng thái ACTIVE (Đánh dấu trang hiện tại) --- */
+.nav-menu li a.active {
+    color: var(--bg-cream); /* Màu chữ chuyển sang màu kem */
+    font-weight: 900;       /* Chữ đậm hơn một chút để nổi bật */
+}
 
+/* Giữ nguyên gạch chân cho item đang active */
+.nav-menu li a.active::after {
+    width: 100%; 
+    background-color: var(--bg-cream);
+}
 /* --- Nút đăng nhập --- */
 .login-btn {
     text-decoration: none; 
