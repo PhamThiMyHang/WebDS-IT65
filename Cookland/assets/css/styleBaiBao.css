@@ -1,0 +1,195 @@
+/* --- CẤU HÌNH MÀU SẮC CHỦ ĐẠO CHO WEBSITE --- */
+:root {
+    --primary-orange: #CC5500;    
+    --bg-cream: #FFF0D9;          
+    --secondary-teal: #83A5A5;    
+    --text-dark: #333;            
+    --text-light: #666;           
+    --white: #ffffff;             
+}
+
+/* --- RESET CSS CHO TOÀN TRANG --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- NỀN VÀ CHỮ MẶC ĐỊNH CỦA TRANG --- */
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+/* =====================================================
+   HEADER – logo + mạng xã hội + ô tìm kiếm
+   ===================================================== */
+
+/* --- Header tổng --- */
+header {
+    background-color: var(--bg-cream);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+/* --- Khối chứa logo + chữ CookLand --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+/* --- Ảnh logo --- */
+.logo-container img { 
+    height: 75px; 
+    width: auto; 
+    object-fit: contain; 
+}
+
+/* --- Chữ COOKLAND --- */
+.logo-text {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Khối bên phải header --- */
+.header-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 50px; 
+}
+
+/* --- Dãy icon mạng xã hội --- */
+.social-icons { 
+    display: flex; 
+    gap: 25px; 
+}
+
+/* --- Từng icon mạng xã hội --- */
+.social-icons a { 
+    color: var(--secondary-teal); 
+    font-size: 22px; 
+    transition: 0.3s; 
+}
+.social-icons a:hover { 
+    color: var(--primary-orange); 
+    transform: translateY(-2px); 
+}
+
+/* --- Khối ô tìm kiếm --- */
+.search-container { 
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+}
+
+/* --- Ô nhập tìm kiếm --- */
+.search-container input {
+    width: 500px; 
+    height: 45px; 
+    padding: 0 50px 0 25px;
+    border: 2px solid var(--secondary-teal);
+    border-radius: 25px;
+    outline: none;
+    background: var(--white);
+}
+
+/* --- Hiệu ứng focus của ô input --- */
+.search-container input:focus { 
+    border-color: var(--primary-orange); 
+}
+
+/* --- Nút kính lúp --- */
+.search-btn { 
+    position: absolute; 
+    right: 20px; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    color: var(--primary-orange); 
+    font-size: 18px; 
+}
+
+/* =====================================================
+   NAVIGATION BAR – menu màu cam
+   ===================================================== */
+
+/* --- Thanh nav chính --- */
+nav.main-nav {
+    background-color: var(--primary-orange);
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
+}
+
+/* --- Menu ngang chính --- */
+.nav-menu {
+    display: flex; 
+    list-style: none; 
+    flex: 1;
+    justify-content: space-between; 
+    margin-right: 80px;
+}
+
+/* --- Từng mục trong menu --- */
+.nav-menu li a {
+    text-decoration: none; 
+    color: var(--white);
+    font-weight: 700; 
+    font-size: 15px;
+    text-transform: uppercase; 
+    transition: color 0.3s; 
+    padding: 10px 0; 
+    position: relative; 
+    white-space: nowrap;
+}
+
+/* --- Gạch underline khi hover --- */
+.nav-menu li a::after {
+    content: ''; 
+    position: absolute; 
+    width: 0; 
+    height: 3px; 
+    bottom: 0; 
+    left: 0; 
+    background-color: var(--bg-cream); 
+    transition: width 0.3s;
+}
+
+.nav-menu li a:hover { color: var(--bg-cream); }
+.nav-menu li a:hover::after { width: 100%; }
+
+/* --- Nút đăng nhập --- */
+.login-btn {
+    text-decoration: none; 
+    color: var(--white); 
+    font-weight: 700; 
+    font-size: 16px;
+    border: 2px solid var(--white); 
+    padding: 8px 25px; 
+    border-radius: 25px; 
+    transition: all 0.3s;
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    white-space: nowrap;
+}
+
+.login-btn:hover { 
+    background-color: var(--white); 
+    color: var(--primary-orange); 
+}
