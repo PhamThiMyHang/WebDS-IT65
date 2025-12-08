@@ -1,3 +1,7 @@
+// ==========================================
+// PHẦN 1: LOGIC CHO HERO SLIDER (GIỮ NGUYÊN)
+// ==========================================
+
 // Biến slideIndex dùng để lưu slide hiện tại (bắt đầu từ slide 1)
 let slideIndex = 1;
 
@@ -7,13 +11,11 @@ let slideInterval = setInterval(() => {
 }, 4000);
 
 // Hàm chuyển slide tiếp theo hoặc lùi (n có thể là +1 hoặc -1)
-// Ví dụ: plusSlides(1) → chuyển sang slide kế
 function plusSlides(n) { 
     showSlides(slideIndex += n); 
 }
 
 // Hàm nhảy đến slide cụ thể (khi bấm dot ở dưới)
-// Khi người dùng click dot → dừng interval cũ, tạo interval mới (reset lại thời gian)
 function currentSlide(n) {
     showSlides(slideIndex = n);
 
@@ -24,7 +26,6 @@ function currentSlide(n) {
 
 // Hàm hiển thị slide theo chỉ số slideIndex
 function showSlides(n) {
-
     let slides = document.getElementsByClassName("slide"); // Lấy tất cả slide
     let dots = document.getElementsByClassName("dot");     // Lấy tất cả dot tròn
 
@@ -54,3 +55,21 @@ function showSlides(n) {
     // Dot tương ứng sáng lên (active)
     dots[slideIndex - 1].classList.add("active");
 }
+
+// ==========================================
+// PHẦN 2: LOGIC CHO MENU ACTIVE (MỚI THÊM)
+// ==========================================
+
+// Lấy danh sách tất cả các thẻ <a> trong menu
+const menuLinks = document.querySelectorAll('.nav-menu li a');
+
+// Duyệt qua từng link để gán sự kiện click
+menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Bước 1: Xóa class 'active' khỏi TẤT CẢ các link (reset về trạng thái thường)
+        menuLinks.forEach(item => item.classList.remove('active'));
+        
+        // Bước 2: Thêm class 'active' vào CHÍNH link vừa được click
+        this.classList.add('active');
+    });
+});
