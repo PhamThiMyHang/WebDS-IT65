@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết món ăn - Cookland</title>
+  
+  <!-- CSS riêng cho trang chi tiết công thức -->
+  <link rel="stylesheet" href="assets/css/recipe.css">
+  
+  <!-- Font chung của toàn site -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Chỗ chèn header chung (menu, logo…) từ file header.html -->
+  <div id="header"></div>
+  
+  <!-- Tiêu đề + nút quay lại của trang chi tiết món ăn -->
+  <header class="header">
+    <h1 class="title">Cookland</h1>
+    
+    <!-- Nút quay lại trang danh sách công thức -->
+    <!-- recipe.js sẽ bắt id="smartBack" để dùng history.back() → giữ nguyên trạng thái lọc & phân trang -->
+    <a href="product.html" class="back-link" id="smartBack">Quay lại danh sách món</a>
+  </header>
+
+  <!-- Nội dung chính của trang -->
+  <main class="wrap">
+    <!-- Khung chứa toàn bộ chi tiết món ăn (ảnh bìa, nguyên liệu, các bước…) -->
+    <!-- recipe.js sẽ đọc id từ URL → tìm món → render toàn bộ nội dung vào đây -->
+    <div id="recipeContainer" class="recipe-box">
+      <!-- Nội dung được JS render vào đây -->
+    </div>
+  </main>
+  
+  <!-- Chỗ chèn footer chung (copyright, liên hệ…) từ file footer.html -->
+  <div id="footer"></div>
+
+  <!-- Chèn header & footer từ file riêng (dùng chung cho mọi trang) -->
+  <script>
+    // Lấy nội dung header.html → nhét vào thẻ id="header"
+    fetch('header.html').then(r=>r.text()).then(html=>{
+      document.getElementById('header').innerHTML = html;
+      // Nếu cần đánh dấu menu "Công thức" là active thì thêm ở đây
+    });
+    
+    // Lấy nội dung footer.html → nhét vào thẻ id="footer"
+    fetch('footer.html').then(r=>r.text()).then(html=>{
+      document.getElementById('footer').innerHTML = html;
+    });
+  </script>
+  
+  <!-- File JS chính của trang chi tiết món ăn -->
+  <!-- Chứa: lấy id từ URL → tìm món trong mảng → render ảnh, nguyên liệu, các bước + xử lý smartBack -->
+  <script src="assets/js/recipe.js"></script>
+</body>
+</html>
