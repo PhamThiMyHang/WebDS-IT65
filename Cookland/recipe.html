@@ -39,16 +39,26 @@
 
   <!-- Chèn header & footer từ file riêng (dùng chung cho mọi trang) -->
   <script>
-    // Lấy nội dung header.html → nhét vào thẻ id="header"
-    fetch('header.html').then(r=>r.text()).then(html=>{
-      document.getElementById('header').innerHTML = html;
-      // Nếu cần đánh dấu menu "Công thức" là active thì thêm ở đây
-    });
-    
-    // Lấy nội dung footer.html → nhét vào thẻ id="footer"
-    fetch('footer.html').then(r=>r.text()).then(html=>{
-      document.getElementById('footer').innerHTML = html;
-    });
+    // 1. Nhúng header.html vào #header
+    fetch('header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+
+        // Sau khi header đã chèn xong → chạy JS của header (menu mobile, slider...)
+        const headerScript = document.createElement('script');
+        headerScript.src = 'assets/js/scriptheader.js';
+        document.body.appendChild(headerScript);
+      })
+      .catch(() => console.log("Lỗi load header – vẫn chạy bình thường"));
+
+    // 2. Nhúng footer.html vào #footer
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      })
+      .catch(() => console.log("Lỗi load footer – vẫn chạy bình thường"));
   </script>
   
   <!-- File JS chính của trang chi tiết món ăn -->
