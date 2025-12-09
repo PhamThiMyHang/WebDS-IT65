@@ -1,91 +1,232 @@
-/* assets/css/tips.css – DẠNG LIST DỌC, GIỐNG ẢNH 100% */
 * { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:"Inter",sans-serif; background:#f8f9fa; color:#333; line-height:1.6; }
 
-.header { text-align:center; padding:40px 20px 30px; background:#fff; border-bottom:1px solid #eee; }
-.title { font-family:'Playfair Display',serif; font-size:42px; color:#cc5500; }
-.subtitle { color:#777; margin:12px 0 30px; font-size:17px; }
-
-.search-box { max-width:700px; margin:0 auto 40px; position:relative; }
-.search-box input { width:100%; padding:16px 60px 16px 20px; border:1px solid #ddd; border-radius:50px; font-size:16px; }
-.search-box button { position:absolute; right:8px; top:8px; width:48px; height:48px; background:#cc5500; color:white; border:none; border-radius:50%; font-size:20px; cursor:pointer; }
-
-.wrap { max-width:1300px; margin:0 auto; padding:40px 20px 80px; display:flex; gap:40px; }
-.filter-box { width:300px; background:white; padding:30px; border-radius:16px; box-shadow:0 8px 25px rgba(0,0,0,0.08); position:sticky; top:20px; }
-.filter-box h3 { font-size:22px; color:#cc5500; margin-bottom:20px; font-family:'Playfair Display',serif; }
-.fg-title { font-weight:600; margin:20px 0 10px; color:#333; }
-.filter-group label { display:block; margin:12px 0; font-size:15px; cursor:pointer; }
-.filter-actions { margin-top:30px; display:flex; gap:12px; }
-#applyFilter { flex:1; background:#cc5500; color:white; border:none; padding:14px; border-radius:50px; font-weight:600; cursor:pointer; }
-.clear-btn { flex:1; background:transparent; color:#cc5500; border:2px solid #cc5500; padding:14px; border-radius:50px; font-weight:600; cursor:pointer; }
-
-.content { flex:1; }
-
-/* LIST DỌC – GIỐNG ẢNH */
-.tips-list { display:flex; flex-direction:column; gap:24px; }
-.tip-item {
-  background:white;
-  border-radius:16px;
-  padding:28px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.08);
-  transition:0.3s;
-}
-.tip-item:hover { transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.12); }
-.tip-title {
-  font-size:20px;
-  color:#cc5500;
-  margin-bottom:10px;
-  font-weight:600;
-}
-.tip-title a { color:inherit; text-decoration:none; }
-.tip-title a:hover { text-decoration:underline; }
-.tip-meta {
-  font-size:14px;
-  color:#888;
-  margin-bottom:14px;
-}
-.tip-content {
-  font-size:15.5px;
-  color:#444;
-  line-height:1.7;
+body { 
+  font-family:"Inter",sans-serif; 
+  background:#f8f9fa;
+  color:#333; 
+  line-height:1.6; 
 }
 
-/* Phân trang */
-.pagination { display:flex; justify-content:center; align-items:center; gap:12px; margin:60px 0; }
-.pagination button {
-  min-width:44px; height:44px; border:none; background:white; color:#cc5500;
-  border-radius:50%; font-weight:600; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.1);
+/* ==================== PHẦN HEADER (ĐÃ SỬA GIỐNG PRODUCT) ==================== */
+.header { 
+  display: flex;                /* Dàn ngang */
+  justify-content: space-between; /* Đẩy sang 2 bên */
+  align-items: center;          /* Căn giữa theo chiều dọc */
+  padding: 40px 60px;           /* Padding rộng hơn */
+  background: #F8F1E0;          /* Màu nền kem giống ảnh */
+  gap: 40px;
 }
-.pagination button:hover:not(:disabled) { background:#cc5500; color:white; }
-.pagination button.active { background:#cc5500; color:white; }
-.pagination button:disabled { opacity:0.5; cursor:not-allowed; }
- /* (giữ nguyên phần cũ, chỉ thêm phần này ở dưới) */
-.tip-tags {
-  margin: 10px 0;
+
+.header-content {
+  flex: 1;                      /* Chiếm không gian bên trái */
+  max-width: 600px;
+}
+
+.title { 
+  font-family:'Roboto',serif; 
+  font-size: 48px;              /* Chữ to hơn */
+  color: #8B4513;               /* Màu nâu đậm giống ảnh */
+  margin-bottom: 10px;
+}
+
+.subtitle { 
+  color: #6D4C41; 
+  font-size: 16px; 
+}
+
+/* Ô tìm kiếm mới */
+.search-box { 
+  flex: 1;                      /* Chiếm không gian bên phải */
+  max-width: 600px; 
+  position: relative; 
+}
+
+.search-box input { 
+  width: 100%; 
+  padding: 18px 50px 18px 25px; /* Padding to, chừa chỗ cho icon */
+  border: 1px solid #ddd; 
+  border-radius: 50px;          /* Bo tròn viên thuốc */
+  font-size: 16px; 
+  background: white;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-box input:focus {
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.15); /* Hiệu ứng khi gõ */
+  border-color: #cc5500;
+}
+
+.search-icon { 
+  position: absolute; 
+  right: 15px; 
+  top: 50%; 
+  transform: translateY(-50%);
+  background: transparent;
+  border: none; 
+  color: #8B4513; 
+  cursor: pointer; 
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
-.tip-tags span {
-  background: #fff0e6;
+
+.search-icon:hover {
   color: #cc5500;
+}
+
+/* ==================== LAYOUT CHÍNH ==================== */
+.wrap { 
+  max-width: 1300px; 
+  margin: 0 auto; 
+  padding: 40px 20px 80px; 
+  display: flex; 
+  gap: 40px; 
+}
+
+/* ==================== BỘ LỌC ==================== */
+.filter-box { 
+  width: 280px; 
+  background: white; 
+  padding: 30px; 
+  border-radius: 16px; 
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05); 
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.filter-box h3 { 
+  font-size: 22px; 
+  color: #8B4513; 
+  margin-bottom: 20px; 
+  font-family: 'Roboto',serif; 
+}
+
+.fg-title { 
+  font-weight: 600; 
+  margin: 20px 0 10px; 
+  color: #555; 
+}
+
+.filter-group label { 
+  display: block; 
+  margin: 10px 0; 
+  font-size: 15px; 
+  cursor: pointer; 
+  color: #333;
+}
+
+.filter-group input {
+  margin-right: 8px;
+  accent-color: #cc5500;
+}
+
+.filter-actions { 
+  margin-top: 30px; 
+  display: flex; 
+  gap: 10px; 
+}
+
+#applyFilter { 
+  flex: 1; 
+  background: #cc5500; 
+  color: white; 
+  border: none; 
+  padding: 12px; 
+  border-radius: 8px; 
+  font-weight: 600; 
+  cursor: pointer; 
+}
+
+.clear-btn { 
+  flex: 1; 
+  background: transparent; 
+  color: #666; 
+  border: 1px solid #ddd; 
+  padding: 12px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+}
+
+/* ==================== DANH SÁCH MẸO ==================== */
+.content { flex: 1; }
+
+.tips-list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px; 
+}
+
+.tip-item {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.tip-item:hover { transform: translateY(-3px); }
+
+.tip-title {
+  font-size: 20px;
+  color: #cc5500;
+  margin-bottom: 8px;
+}
+
+.tip-title a { text-decoration: none; color: inherit; }
+
+.tip-tags span {
+  background: #FFF3E0;
+  color: #E65100;
   font-size: 13px;
   padding: 4px 10px;
   border-radius: 20px;
-  font-weight: 600;
+  margin-right: 8px;
+  font-weight: 500;
 }
-.main-nav .nav-link {
-  color: #666;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  transition: 0.3s;
+
+.tip-content {
+  margin-top: 12px;
+  color: #555;
+  font-size: 15px;
 }
-.main-nav .nav-link.active,
-.main-nav .nav-link:hover {
-  background: #CC55D0;
+
+/* Pagination */
+.pagination { 
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
+  margin-top: 50px; 
+}
+
+.pagination button {
+  width: 40px; height: 40px; 
+  border: none; 
+  background: white; 
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+}
+
+.pagination button.active, .pagination button:hover:not(:disabled) {
+  background: #cc5500;
   color: white;
 }
-/* Responsive */
-@media (max-width:992px) { .wrap { flex-direction:column; } .filter-box { width:100%; position:static; } }
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .header-content { text-align: center; margin-bottom: 20px; }
+  .search-box { width: 100%; }
+  .wrap { flex-direction: column; }
+  .filter-box { width: 100%; }
+}

@@ -5,66 +5,88 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mẹo vặt & Kinh nghiệm nấu ăn — Cookland</title>
   <link rel="stylesheet" href="assets/css/tips.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Thêm Font Awesome nếu cần icon, nhưng ở đây mình dùng SVG trực tiếp cho nhẹ -->
 </head>
 <body>
  <div id="header"></div>
-<header class="header">
-  <h1 class="title">Mẹo vặt & Kinh nghiệm nấu ăn</h1>
-  <p class="subtitle">Tìm kiếm và chia sẻ mẹo hay nhất từ cộng đồng Cookland</p>
-  <div class="search-box">
-    <input id="searchInput" placeholder="Tìm kiếm mẹo vặt...">
-    <button class="search-icon">Search</button>
-  </div>
-</header>
 
-<main class="wrap">
- <aside class="filter-box">
-  <h3>Bộ lọc</h3>
-  
-  <div class="filter-group">
-    <p class="fg-title">Loại mẹo</p>
-    <label><input type="checkbox" name="type" value="khửmùi"> Khử mùi</label>
-    <label><input type="checkbox" name="type" value="bảooquản"> Bảo quản</label>
-    <label><input type="checkbox" name="type" value="review"> Review dụng cụ</label>
-    <label><input type="checkbox" name="type" value="nấuăn"> Nấu ăn</label>
-  </div>
+ <!-- PHẦN HEADER MỚI: GIỐNG PRODUCT -->
+ <header class="header">
+   <!-- Nhóm nội dung bên trái -->
+   <div class="header-content">
+      <h1 class="title">Mẹo vặt & Kinh nghiệm</h1>
+      <p class="subtitle">Tìm kiếm và chia sẻ mẹo hay nhất từ cộng đồng Cookland</p>
+   </div>
+   
+   <!-- Ô tìm kiếm bên phải (Đã đổi ID) -->
+   <form id="tipsSearchForm" class="search-box" onsubmit="return false">
+     <input 
+       id="tipsSearchInput" 
+       type="text" 
+       placeholder="Tìm kiếm mẹo (ví dụ: Bảo quản rau)..."
+       autocomplete="off"
+     >
+     <button type="button" id="tipsSearchBtn" class="search-icon">
+       <!-- Icon kính lúp SVG giống Product -->
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+     </button>
+   </form>
+ </header>
 
-  <div class="filter-group">
-    <p class="fg-title">Độ dễ</p>
-    <label><input type="checkbox" name="level" value="dễlàm"> Dễ làm</label>
-    <label><input type="checkbox" name="level" value="nhanhgọn"> Nhanh gọn</label>
-    <label><input type="checkbox" name="level" value="an toàn"> An toàn</label>
-  </div>
+ <main class="wrap">
+  <!-- Thanh lọc bên trái -->
+  <aside class="filter-box">
+    <h3>Bộ lọc</h3>
+    
+    <div class="filter-group">
+      <p class="fg-title">Loại mẹo</p>
+      <label><input type="checkbox" name="type" value="khửmùi"> Khử mùi</label>
+      <label><input type="checkbox" name="type" value="bảooquản"> Bảo quản</label>
+      <label><input type="checkbox" name="type" value="review"> Review dụng cụ</label>
+      <label><input type="checkbox" name="type" value="nấuăn"> Nấu ăn</label>
+    </div>
 
-  <div class="filter-actions">
-    <button id="applyFilter">Áp dụng</button>
-    <button id="clearFilter" class="clear-btn">Xóa bộ lọc</button>
-  </div>
-</aside>
+    <div class="filter-group">
+      <p class="fg-title">Độ dễ</p>
+      <label><input type="checkbox" name="level" value="dễlàm"> Dễ làm</label>
+      <label><input type="checkbox" name="level" value="nhanhgọn"> Nhanh gọn</label>
+      <label><input type="checkbox" name="level" value="an toàn"> An toàn</label>
+    </div>
+
+    <div class="filter-actions">
+      <button id="applyFilter">Áp dụng</button>
+      <button id="clearFilter" class="clear-btn">Xóa bộ lọc</button>
+    </div>
+  </aside>
+
+  <!-- Danh sách mẹo -->
   <section class="content">
     <div id="tipsList" class="tips-list"></div>
-
     <div class="pagination">
       <button id="prevBtn" disabled>Trước</button>
       <div id="pageNumbers"></div>
       <button id="nextBtn">Sau</button>
     </div>
   </section>
-</main>
-<div id="footer"></div>
-<div id="header"></div>
-<div id="footer"></div>
+ </main>
 
-<script>
-fetch('header.html').then(r=>r.text()).then(html=>{
-  document.getElementById('header').innerHTML = html;
-  // thêm active menu ở đây
-});
-fetch('footer.html').then(r=>r.text()).then(html=>{
-  document.getElementById('footer').innerHTML = html;
-});
-</script>
-<script src="assets/js/tips.js"></script>
+ <div id="footer"></div>
+
+ <script>
+  fetch('header.html').then(r=>r.text()).then(html=>{
+    document.getElementById('header').innerHTML = html;
+    // Script header riêng nếu cần (như slider)
+    const script = document.createElement("script");
+    script.src = "assets/js/scriptheader.js"; 
+    document.body.appendChild(script);
+  });
+  
+  fetch('footer.html').then(r=>r.text()).then(html=>{
+    document.getElementById('footer').innerHTML = html;
+  });
+ </script>
+
+ <script src="assets/js/tips.js"></script>
 </body>
 </html>

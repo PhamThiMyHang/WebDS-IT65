@@ -1,27 +1,37 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+/* Reset toàn cục để layout không bị lệch */
+
 body {
   font-family: "Inter", system-ui, sans-serif;
-  background: #FFF0D9;
-  color: #4a2e18;
+  background: #FFF0D9;               /* Nền vàng nhạt đặc trưng Cookland */
+  color: #4a2e18;                    /* Màu chữ nâu đậm dễ đọc */
   line-height: 1.7;
 }
 
+/* ==================== HEADER (Cookland + nút quay lại) ==================== */
 .header {
   text-align: center;
   padding: 32px 20px 12px;
-  background: #FFF0D9;
+  background: #FFF0D9;               /* Liền mạch với nền body */
 }
 .title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', serif;
   font-size: 46px;
-  color: #7a3e10;
+  color: #7a3e10;                    /* Nâu đỏ đậm */
   margin: 0;
 }
+
+/* Nút "Quay lại" */
 .back-link {
   display: inline-block;
   margin-top: 12px;
   font-size: 15px;
-  color: #CC55D0;
+  color: #CC55D0;                    /* Màu tím hồng chủ đạo */
   text-decoration: none;
   font-weight: 600;
   padding: 8px 16px;
@@ -34,34 +44,35 @@ body {
   color: white;
 }
 
-/* Container */
+/* ==================== LAYOUT CHÍNH ==================== */
 .wrap {
-  max-width: 960px;
+  max-width: 960px;                  /* Giới hạn độ rộng để đọc dễ chịu */
   margin: 30px auto 80px;
   padding: 0 20px;
 }
 
+/* Khung bao toàn bộ nội dung món ăn */
 .recipe-box {
   background: #fff;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-  overflow: hidden;
+  overflow: hidden;                  /* Ảnh không bị tràn ra ngoài */
 }
 
-/* Ảnh đại diện */
+/* Ảnh bìa món ăn */
 .hero {
   width: 100%;
   height: 420px;
-  object-fit: cover;
+  object-fit: cover;                 /* Cắt ảnh vừa khung, không méo */
   border-radius: 18px;
   margin-bottom: 28px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* Tiêu đề món */
+/* Tiêu đề món ăn */
 .recipe-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', serif;
   font-size: 38px;
   color: #8a3d1c;
   margin: 0 0 10px;
@@ -74,12 +85,12 @@ body {
   margin-bottom: 30px;
 }
 
-/* Tiêu đề phần */
+/* Tiêu đề các phần (Nguyên liệu, Cách làm…) */
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', serif;
   font-size: 26px;
   color: #7a3e10;
-  background: #F3D0A5;
+  background: #F3D0A5;               /* Nền cam nhạt nổi bật */
   padding: 10px 20px;
   border-radius: 12px;
   display: inline-block;
@@ -87,7 +98,7 @@ body {
   box-shadow: 0 4px 12px rgba(243, 208, 165, 0.4);
 }
 
-/* Danh sách nguyên liệu & bước nấu */
+/* ==================== NGUYÊN LIỆU & CÁC BƯỚC ==================== */
 .ingredients,
 .steps {
   margin: 20px 0;
@@ -97,15 +108,17 @@ body {
 .steps li {
   padding: 10px 0;
   font-size: 16px;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed #eee;    /* Đường kẻ đứt phân cách */
 }
 .steps li {
   margin-bottom: 30px;
   padding-bottom: 20px;
 }
-.steps li:last-child { border-bottom: none; }
+.steps li:last-child { 
+  border-bottom: none;               /* Bước cuối không có đường kẻ */
+}
 
-/* Ảnh bước nấu */
+/* Ảnh minh họa từng bước nấu */
 .step-img {
   width: 100%;
   max-height: 320px;
@@ -114,6 +127,8 @@ body {
   margin: 16px 0;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
+
+/* Menu điều hướng (nếu có) – giữ lại để dùng chung */
 .main-nav .nav-link {
   color: #666;
   font-weight: 600;
@@ -127,11 +142,22 @@ body {
   background: #CC55D0;
   color: white;
 }
-/* Responsive */
+
 @media (max-width: 768px) {
-  .wrap { padding: 0 16px; }
-  .recipe-box { padding: 24px; border-radius: 16px; }
-  .hero { height: 280px; }
-  .recipe-title { font-size: 32px; }
-  .section-title { font-size: 24px; }
+  .wrap { 
+    padding: 0 16px; 
+  }
+  .recipe-box { 
+    padding: 24px; 
+    border-radius: 16px; 
+  }
+  .hero { 
+    height: 280px;                    /* Ảnh nhỏ hơn trên mobile */
+  }
+  .recipe-title { 
+    font-size: 32px; 
+  }
+  .section-title { 
+    font-size: 24px; 
+  }
 }
