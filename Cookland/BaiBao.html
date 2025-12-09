@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="assets/css/styleBaiBao.css">
+        <link rel="stylesheet" href="assets/css/baibao.css">
     </head>
 
     <body>
@@ -71,5 +71,122 @@
             </a>
 
         </nav>
+        <div class="NoiDung">
+            <div class="NoiDungChinh">
+
+                <div class="author-info">
+                    <div class="author-avatar-container">
+                        <img src="avatar-placeholder.jpg" alt="Ảnh tác giả" class="author-avatar" id="author-avatar">
+                    </div>
+                    <div class="author-text">
+                        <a href="#" class="author-name" id="author-name">Tên tác giả</a>
+                        <p class="post-date" id="post-date">Ngày/giờ đăng bài</p>
+                    </div>
+                </div>
+
+                <h1 class="dish-name" id="article-title">Đang tải...</h1>
+
+                <div class="main-content" id="article-content-container">
+                    <p>Đang tải nội dung bài viết...</p>
+                </div>
+
+                <div class="outer-container">
+                    <div class="interaction-buttons-container">
+                        
+                        <button class="icon-button" onclick="ClickLike()" data-icon-class="fa-heart">
+                            <i class="fa-solid fa-heart icon white"  id="like-button"></i>
+                            <span class="button-text">Yêu thích</span>
+                        </button>
+                        
+                        <button class="icon-button" onclick="ClickComment()">
+                            <i class="fa-solid fa-comment icon white" style="color: #f5e5c8;" id="comment-button" ></i>
+                            <span class="button-text">Bình luận</span>
+                        </button>
+                        
+                        <button class="icon-button" onclick="ClickSave()" data-icon-class="bi-bookmark">
+                            <i class="bi bi-bookmark-fill icon white" id="save-button"></i>
+                            <span class="button-text">Lưu</span>
+                        </button>
+                        
+                        <button class="icon-button" onclick="ClickShare()"  data-icon-class="fa-share">
+                            <i class="fa-solid fa-share icon white" style="color: #f5e5c8;"id="share-button"></i>
+                            <span class="button-text">Chia sẻ</span>
+                        </button>
+
+                    </div>
+                </div>
+                <div id="commentBox" class="comment-box hidden">
+        
+                        <div class="comment-input-area">
+                            <div class="user-avatar">
+                                <img src="your_avatar.jpg" alt="Ảnh đại diện của bạn" class="avatar">
+                            </div>
+                            <form id="commentForm" class="comment-form">
+                                <input type="text" id="commentText" placeholder="Bình luận" >
+                                <button type="submit" class="post-button">Đăng</button>
+                            </form>
+                        </div>
+                        
+                        <hr>
+
+                        <div id="commentList" class="comment-list">
+                            <div class="comment-item">
+                                <div class="comment-meta">
+                                    <a href="#" class="author-link">
+                                        <img src="avatar1.jpg" alt="Avatar 1" class="avatar">
+                                        <strong>Tên tác giả 1</strong>
+                                    </a>
+                                    <span class="timestamp"> | Ngày giờ đăng bài</span>
+                                </div>
+                                <div class="comment-content">
+                                    Bình luận 1
+                                </div>
+                            </div>
+
+                            <div class="comment-item">
+                                <div class="comment-meta">
+                                    <a href="#" class="author-link">
+                                        <img src="avatar2.jpg" alt="Avatar 2" class="avatar">
+                                        <strong>Tên tác giả 2</strong>
+                                    </a>
+                                    <span class="timestamp"> | Ngày giờ đăng bài</span>
+                                </div>
+                                <div class="comment-content">
+                                    Bình luận 2
+                                </div>
+                            </div>
+                            
+                            <div class="comment-item">
+                                <div class="comment-meta">
+                                    <a href="#" class="author-link">
+                                        <img src="avatar3.jpg" alt="Avatar 3" class="avatar">
+                                        <strong>Tên tác giả 3</strong>
+                                    </a>
+                                    <span class="timestamp"> | Ngày giờ đăng bài</span>
+                                </div>
+                                <div class="comment-content">
+                                    Bình luận 3
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="loadMoreBtn" class="load-more-btn" onclick="loadMoreComments()">Xem thêm</button>
+
+                </div>
+            </div>    
+            
+            <div class="NoiDungPhuMoRong">
+
+            </div>
+        </div>
+        <div id="fullscreenModal" class="modal" onclick="closeFullscreenImage()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="fullImage">
+            <div id="caption">Tên món ăn</div>
+        </div>
+        <div class="Footer">
+            <div id="footer"></div>
+        </div>
+        <script src="assets/js/BaiBao.js"></script>
     </body>
 </html>

@@ -1,0 +1,292 @@
+[
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 1,
+        "title": "Bún chả Hà Nội", 
+        "excerpt": "Món bún chả thơm lừng, đậm đà hương vị truyền thống Hà Nội.", 
+        "type": "image", 
+        "imageSrc": "bun-cha.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 2, 
+        "title": "Cách làm bánh xèo", 
+        "excerpt": "Bí quyết làm vỏ bánh giòn tan, nhân tôm thịt đầy đặn, kèm rau sống và nước chấm chua ngọt.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/exampleVideoID" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 3, 
+        "title": "Gợi ý món ăn tối", 
+        "excerpt": "Danh sách 10 món ăn tối đơn giản, dễ làm tại nhà, tiết kiệm thời gian.", 
+        "type": "text-only" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 4, 
+        "title": "Phở bò truyền thống", 
+        "excerpt": "Nước dùng phở ngọt thanh, bò tái mềm, bánh phở dai ngon.", 
+        "type": "image", 
+        "imageSrc": "pho-bo.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 5, 
+        "title": "Làm chả giò giòn rụm", 
+        "excerpt": "Hướng dẫn chi tiết cách làm chả giò (nem rán) giòn rụm lâu, không bị ỉu.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/anotherExampleVideoID" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 6, 
+        "title": "Công thức làm bánh flan", 
+        "excerpt": "Món tráng miệng mềm mịn, béo ngậy.", 
+        "type": "text-only" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 7, 
+        "title": "Bánh mì Việt Nam", 
+        "excerpt": "Món ăn đường phố nổi tiếng thế giới.", 
+        "type": "image", 
+        "imageSrc": "banh-mi.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 8, 
+        "title": "Cà ri gà kiểu Thái", 
+        "excerpt": "Cay nồng, đậm đà hương vị.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/thaiCurryVideo" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 9, 
+        "title": "Salad trộn dầu giấm", 
+        "excerpt": "Công thức salad thanh mát, giảm cân.", 
+        "type": "text-only" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 1, 
+        "title": "Bún chả Hà Nội", 
+        "excerpt": "Món bún chả thơm lừng, đậm đà hương vị truyền thống Hà Nội.", 
+        "type": "image", 
+        "imageSrc": "bun-cha.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 2, 
+        "title": "Cách làm bánh xèo", 
+        "excerpt": "Bí quyết làm vỏ bánh giòn tan, nhân tôm thịt đầy đặn, kèm rau sống và nước chấm chua ngọt.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/exampleVideoID" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 3, 
+        "title": "Gợi ý món ăn tối", 
+        "excerpt": "Danh sách 10 món ăn tối đơn giản, dễ làm tại nhà, tiết kiệm thời gian.", 
+        "type": "text-only" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 4, 
+        "title": "Phở bò truyền thống", 
+        "excerpt": "Nước dùng phở ngọt thanh, bò tái mềm, bánh phở dai ngon.", 
+        "type": "image", 
+        "imageSrc": "pho-bo.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 5, 
+        "title": "Làm chả giò giòn rụm", 
+        "excerpt": "Hướng dẫn chi tiết cách làm chả giò (nem rán) giòn rụm lâu, không bị ỉu.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/anotherExampleVideoID" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 6, 
+        "title": "Công thức làm bánh flan", 
+        "excerpt": "Món tráng miệng mềm mịn, béo ngậy.", 
+        "type": "text-only" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 7, 
+        "title": "Bánh mì Việt Nam", 
+        "excerpt": "Món ăn đường phố nổi tiếng thế giới.", 
+        "type": "image", 
+        "imageSrc": "banh-mi.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 8, 
+        "title": "Cà ri gà kiểu Thái", 
+        "excerpt": "Cay nồng, đậm đà hương vị.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/thaiCurryVideo" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 9, 
+        "title": "Salad trộn dầu giấm", 
+        "excerpt": "Công thức salad thanh mát, giảm cân.", 
+        "type": "text-only" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 1, 
+        "title": "Bún chả Hà Nội", 
+        "excerpt": "Món bún chả thơm lừng, đậm đà hương vị truyền thống Hà Nội.", 
+        "type": "image", 
+        "imageSrc": "bun-cha.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 2, 
+        "title": "Cách làm bánh xèo", 
+        "excerpt": "Bí quyết làm vỏ bánh giòn tan, nhân tôm thịt đầy đặn, kèm rau sống và nước chấm chua ngọt.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/exampleVideoID" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 3, 
+        "title": "Gợi ý món ăn tối", 
+        "excerpt": "Danh sách 10 món ăn tối đơn giản, dễ làm tại nhà, tiết kiệm thời gian.", 
+        "type": "text-only" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 4, 
+        "title": "Phở bò truyền thống", 
+        "excerpt": "Nước dùng phở ngọt thanh, bò tái mềm, bánh phở dai ngon.", 
+        "type": "image", 
+        "imageSrc": "pho-bo.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 5, 
+        "title": "Làm chả giò giòn rụm", 
+        "excerpt": "Hướng dẫn chi tiết cách làm chả giò (nem rán) giòn rụm lâu, không bị ỉu.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/anotherExampleVideoID" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 6, 
+        "title": "Công thức làm bánh flan", 
+        "excerpt": "Món tráng miệng mềm mịn, béo ngậy.", 
+        "type": "text-only" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 7, 
+        "title": "Bánh mì Việt Nam", 
+        "excerpt": "Món ăn đường phố nổi tiếng thế giới.", 
+        "type": "image", 
+        "imageSrc": "banh-mi.jpg" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 8, 
+        "title": "Cà ri gà kiểu Thái", 
+        "excerpt": "Cay nồng, đậm đà hương vị.", 
+        "type": "video", 
+        "videoEmbedUrl": "https://www.youtube.com/embed/thaiCurryVideo" 
+    },
+    { 
+        "name":"Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "link":"Canhan.html",
+        "time": "25/12/2025",
+        "id": 9, 
+        "title": "Salad trộn dầu giấm", 
+        "excerpt": "Công thức salad thanh mát, giảm cân.", 
+        "type": "text-only" 
+    }
+
+    
+]

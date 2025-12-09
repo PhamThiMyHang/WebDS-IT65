@@ -132,210 +132,179 @@
         <div class="NutXemThem">
             <button><a href="#">XEM THÊM</a></button>
         </div>
+        <div id="recipe-feed-container">
+        </div>
 
-
-        <div class="recipe-card">
+        <div id="pagination-container" class="pagination-controls">
+        </div>
+        <template id="recipe-card-template-image">
+            <div class="recipe-card">
         
-            <div class="author-info">
-                <div class="author-avatar-container">
-                    <img src="avatar-placeholder.jpg" alt="Ảnh tác giả" class="author-avatar">
+                <div class="author-info">
+                    <div class="author-avatar-container">
+                        <img src="avatar-placeholder.jpg" alt="Ảnh tác giả" class="author-avatar">
+                    </div>
+                    <div class="author-text">
+                        <a href="#" class="author-name">Tên tác giả</a>
+                        <p class="post-date">Ngày/giờ đăng bài</p>
+                    </div>
                 </div>
-                <div class="author-text">
-                    <a href="#" class="author-name">Tên tác giả</a>
-                    <p class="post-date">Ngày/giờ đăng bài</p>
-                </div>
-            </div>
 
-            <div class="main-content">
-                
-                <div class="image-column">
-                    <!--<img src="food-placeholder.jpg" alt="Hình ảnh món ăn" class="recipe-image">-->
-                    <img 
-                        src="food-placeholder.jpg" 
-                        alt="Hình ảnh món ăn" 
-                        class="recipe-image"
-                        id="main-recipe-image"
-                        onclick="openFullscreenImage('food-placeholder.jpg')" 
-                    >
-                </div>
-                
-                <div id="fullscreenModal" class="modal" onclick="closeFullscreenImage()">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="fullImage">
-                    <div id="caption">Tên món ăn</div>
-                </div>
-                <div class="text-column">
+                <div class="main-content">
                     
-                    <h1 class="dish-name">Tên món ăn</h1>
-                    
-                    <div class="article-excerpt">
-                        <p>Đây là phần nội dung trích dẫn ngắn gọn từ bài viết chính. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                    <div class="image-column">
                         
-                        <a href="#" class="read-more-link">...</a>
+                        <img 
+                            src="food-placeholder.jpg" 
+                            alt="Hình ảnh món ăn" 
+                            class="recipe-image"
+                            id="main-recipe-image"
+                            onclick="openFullscreenImage('food-placeholder.jpg')" 
+                        >
+                    </div>
+                
+                    <div class="text-column">
+                        
+                        <h1 class="dish-name">Tên món ăn</h1>
+                        
+                        <div class="article-excerpt">
+                            <p>Đây là phần nội dung trích dẫn ngắn gọn từ bài viết chính. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            
+                            <a href="#" class="read-more-link">...</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="outer-container">
-            <div class="interaction-buttons-container">
-                
-                <button class="icon-button" onclick="ClickLike()" data-icon-class="fa-heart">
-                    <i class="fa-solid fa-heart icon white"  id="like-button"></i>
-                    <span class="button-text">Yêu thích</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickComment()">
-                    <i class="fa-solid fa-comment icon white" style="color: #f5e5c8;" id="comment-button" ></i>
-                    <span class="button-text">Bình luận</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickSave()" data-icon-class="bi-bookmark">
-                    <i class="bi bi-bookmark-fill icon white" id="save-button"></i>
-                    <span class="button-text">Lưu</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickShare()"  data-icon-class="fa-share">
-                    <i class="fa-solid fa-share icon white" style="color: #f5e5c8;"id="share-button"></i>
-                    <span class="button-text">Chia sẻ</span>
-                </button>
+            <div class="outer-container">
+                <div class="interaction-buttons-container">
+                    
+                    <button class="icon-button" onclick="ClickLike(this)" data-icon-class="fa-heart">
+                        <i class="fa-solid fa-heart icon white"  data-action="like-button"></i>
+                        <span class="button-text">Yêu thích</span>
+                    </button>
+                    
+                    <button class="icon-button" onclick="ClickSave(this)" data-icon-class="bi-bookmark">
+                        <i class="bi bi-bookmark-fill icon white" data-action="save-button"></i>
+                        <span class="button-text">Lưu</span>
+                    </button>
+                    
+                    <button class="icon-button" onclick="ClickShare(this)"  data-icon-class="fa-share">
+                        <i class="fa-solid fa-share icon white" style="color: #f5e5c8;"data-action="share-button"></i>
+                        <span class="button-text">Chia sẻ</span>
+                    </button>
 
-            </div>
-        </div>
-        <!--Khoi div danh cho video-->
-        
-        <div class="recipe-card">
-        
-            <div class="author-info">
-                <div class="author-avatar-container">
-                    <img src="avatar-placeholder.jpg" alt="Ảnh tác giả" class="author-avatar">
-                </div>
-                <div class="author-text">
-                    <a href="#" class="author-name">Tên tác giả</a>
-                    <p class="post-date">Ngày/giờ đăng bài</p>
                 </div>
             </div>
+        </template>
 
-            <div class="main-content">
-                
-                <div class="image-column">
-                    <!--<img src="food-placeholder.jpg" alt="Hình ảnh món ăn" class="recipe-image">-->
-                    <img 
-                        src="food-placeholder.jpg" 
-                        alt="Hình ảnh món ăn" 
-                        class="recipe-image"
-                        id="main-recipe-image"
-                        onclick="openFullscreenImage('food-placeholder.jpg')" 
-                    >
+        <template id="recipe-card-template-text-only">
+            <div class="recipe-card">
+        
+                <div class="author-info">
+                    <div class="author-avatar-container">
+                        <img src="avatar-placeholder.jpg" alt="Ảnh tác giả" class="author-avatar">
+                    </div>
+                    <div class="author-text">
+                        <a href="#" class="author-name">Tên tác giả</a>
+                        <p class="post-date">Ngày/giờ đăng bài</p>
+                    </div>
                 </div>
-                
-                <div id="fullscreenModal" class="modal" onclick="closeFullscreenImage()">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="fullImage">
-                    <div id="caption">Tên món ăn</div>
-                </div>
-                <div class="text-column">
+
+                <div class="main-content">
                     
-                    <h1 class="dish-name">Tên món ăn</h1>
-                    
-                    <div class="article-excerpt">
-                        <p>Đây là phần nội dung trích dẫn ngắn gọn từ bài viết chính. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                    <div class="text-column">
                         
-                        <a href="BaiBao.html" class="read-more-link">...</a>
+                        <h1 class="dish-name">Tên món ăn</h1>
+                        
+                        <div class="article-excerpt">
+                            <p>Đây là phần nội dung trích dẫn ngắn gọn từ bài viết chính. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                            
+                            <a href="#" class="read-more-link">...</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="outer-container">
+                <div class="interaction-buttons-container">
+                    
+                    <button class="icon-button" onclick="ClickLike(this)" data-icon-class="fa-heart">
+                        <i class="fa-solid fa-heart icon white"  data-action="like-button"></i>
+                        <span class="button-text">Yêu thích</span>
+                    </button>
+                    <!--Xoa nút comment-->
+                    <button class="icon-button" onclick="ClickSave(this)" data-icon-class="bi-bookmark">
+                        <i class="bi bi-bookmark-fill icon white" data-action="save-button"></i>
+                        <span class="button-text">Lưu</span>
+                    </button>
+                    
+                    <button class="icon-button" onclick="ClickShare(this)"  data-icon-class="fa-share">
+                        <i class="fa-solid fa-share icon white" style="color: #f5e5c8;"data-action="share-button"></i>
+                        <span class="button-text">Chia sẻ</span>
+                    </button>
+
+                </div>
+            </div>
+        </template>
+
+        <template id="recipe-card-template-video">
+            <div class="recipe-card">
+                <div class="author-info">
+                    <div class="author-avatar-container">
+                        <img src="avatar-placeholder.jpg" alt="Ảnh tác giả" class="author-avatar">
+                    </div>
+                    <div class="author-text">
+                        <a href="#" class="author-name">Tên tác giả</a>
+                        <p class="post-date">Ngày/giờ đăng bài</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="image-column video-column"> 
+                        <div class="video-placeholder" data-embed-url="">
+                            [Video player placeholder] 
+                        </div>
+                    </div>
+                    
+                    <div class="text-column">
+                        <h1 class="dish-name">Tên món ăn</h1>
+                        <div class="article-excerpt">
+                            <p class="excerpt-text">...</p>
+                            <a href="#" class="read-more-link">...</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="outer-container">
-            <div class="interaction-buttons-container">
-                
-                <button class="icon-button" onclick="ClickLike()" data-icon-class="fa-heart">
-                    <i class="fa-solid fa-heart icon white"  id="like-button"></i>
-                    <span class="button-text">Yêu thích</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickComment()">
-                    <i class="fa-solid fa-comment icon white" style="color: #f5e5c8;" id="comment-button" ></i>
-                    <span class="button-text">Bình luận</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickSave()" data-icon-class="bi-bookmark">
-                    <i class="bi bi-bookmark-fill icon white" id="save-button"></i>
-                    <span class="button-text">Lưu</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickShare()"  data-icon-class="fa-share">
-                    <i class="fa-solid fa-share icon white" style="color: #f5e5c8;"id="share-button"></i>
-                    <span class="button-text">Chia sẻ</span>
-                </button>
-
-            </div>
-        </div>
-        <!--Khoi div tham khảo một vài người khác-->
-
-        <div class="NoiDungChen">
-            <div id="noibat"></div>
-        </div>
-
-        <!--Lặp lại khối div đã có với hình dạng bài viết không có ảnh-->
-        
-        <div class="recipe-card">
-        
-            <div class="author-info">
-                <div class="author-avatar-container">
-                    <img src="avatar-placeholder.jpg" alt="Ảnh tác giả" class="author-avatar">
-                </div>
-                <div class="author-text">
-                    <a href="#" class="author-name">Tên tác giả</a>
-                    <p class="post-date">Ngày/giờ đăng bài</p>
-                </div>
-            </div>
-
-            <div class="main-content">
-                
-                <div class="text-column">
+            <div class="outer-container">
+                <div class="interaction-buttons-container">
                     
-                    <h1 class="dish-name">Tên món ăn</h1>
+                    <button class="icon-button" onclick="ClickLike(this)" data-icon-class="fa-heart">
+                        <i class="fa-solid fa-heart icon white"  data-action="like-button"></i>
+                        <span class="button-text">Yêu thích</span>
+                    </button>
                     
-                    <div class="article-excerpt">
-                        <p>Đây là phần nội dung trích dẫn ngắn gọn từ bài viết chính. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-                        
-                        <a href="#" class="read-more-link">...</a>
-                    </div>
+                    <!--Xóa nút comment-->
+                    <button class="icon-button" onclick="ClickSave(this)" data-icon-class="bi-bookmark">
+                        <i class="bi bi-bookmark-fill icon white" data-action="save-button"></i>
+                        <span class="button-text">Lưu</span>
+                    </button>
+                    
+                    <button class="icon-button" onclick="ClickShare(this)"  data-icon-class="fa-share">
+                        <i class="fa-solid fa-share icon white" style="color: #f5e5c8;"data-action="share-button"></i>
+                        <span class="button-text">Chia sẻ</span>
+                    </button>
+
                 </div>
-                
             </div>
-        </div>
-
-        <div class="outer-container">
-            <div class="interaction-buttons-container">
-                
-                <button class="icon-button" onclick="ClickLike()" data-icon-class="fa-heart">
-                    <i class="fa-solid fa-heart icon white"  id="like-button"></i>
-                    <span class="button-text">Yêu thích</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickComment()">
-                    <i class="fa-solid fa-comment icon white" style="color: #f5e5c8;" id="comment-button" ></i>
-                    <span class="button-text">Bình luận</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickSave()" data-icon-class="bi-bookmark">
-                    <i class="bi bi-bookmark-fill icon white" id="save-button"></i>
-                    <span class="button-text">Lưu</span>
-                </button>
-                
-                <button class="icon-button" onclick="ClickShare()"  data-icon-class="fa-share">
-                    <i class="fa-solid fa-share icon white" style="color: #f5e5c8;"id="share-button"></i>
-                    <span class="button-text">Chia sẻ</span>
-                </button>
-
-            </div>
-        </div>
-
-
+        </template>
+        
         <div id="footer"></div>
+        <div id="fullscreenModal" class="modal" onclick="closeFullscreenImage()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="fullImage">
+            <div id="caption">Tên món ăn</div>
+        </div>
         <script src="assets/js/CongDong.js"></script>
     </body>
 
