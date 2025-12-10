@@ -10,7 +10,134 @@
         "name": "Khánh Duy",
         "scr": "images/KhannhDuy.jpg",
         "number": 5,
-        "bio": "Chuyên gia ẩm thực Thái Lan và các món Á hiện đại. Khám phá các công thức fusion độc đáo cùng tôi!",
+        "bio": "Chuyên gia ẩm thực hiện đại. Khám phá các công thức fusion độc đáo cùng tôi!",
         "id": "2,4,6,10,15"
+    },
+    {
+        "name":"Mai Đào",
+        "scr": "images/MaiDao.jpg",
+        "number": 5,
+        "bio": "Đam mê, kiên trì theo đuổi ước mơ",
+        "id": "3"
+    },
+    {
+        "name":"Ngọc Giauf",
+        "scr": "images/NgocGiau.jpg",
+        "number": 1,
+        "bio": "Đam mê, kiên trì theo đuổi ước mơ",
+        "id":"5"
+    },
+    {
+        "name":"Ngọc Hà",
+        "scr": "images/NgocHa.jpg",
+        "number": 5,
+        "bio": "Cứ bước rồi sẽ tới đích thôi!!!",
+        "id": "7"
+    },
+    {
+        "name":"Panda",
+        "scr": "images/Panda.jpg",
+        "number": 1,
+        "bio": "Bộ đội cụ hồ đảm đang !!!",
+        "id": "9"
+    },
+    {
+        "name":"Tuấn Anh",
+        "scr": "images/TuanAnh.jpg",
+        "number": 1,
+        "bio": "Cookland",
+        "id": "11"
+    },
+    {
+        "name":"DER",
+        "scr": "images/Der.jpg",
+        "number": 1,
+        "bio": "DER: N.T.N",
+        "id": "13"
+    },
+    {
+        "name":"chokker",
+        "scr": "images/chokker.jpg",
+        "number": 1,
+        "bio": "Một người đam mê ẩm thực, hành trình khám phá thế giới ẩm thực bắt đầu từ đây. Hãy theo dõi hành trình này của tôi nhé, một hành trình thú vị mới sẽ, đang bắt đầu",
+        "id": "14"
+    },
+    {
+        "name":"Nguyễn Văn ",
+        "scr": "images/NguyenVan.jpg",
+        "number": 1,
+        "bio":"",
+        "id": "16"
+    },
+    { 
+        "name":"ABCD",
+        "scr": "images/ABCD.jpg",
+        "number":1,
+        "id": "17"
+    },
+    { 
+        "name":"PéMin",
+        "scr": "images/PéMin.jpg",
+        "bio":"Đường Làng Tăng Phú, Thủ Đức, TP. Hồ Chí Minh, (Quán đã mở thêm một chi nhánh mới bên cạnh mọi người ủng hộ quán nhá)",
+        "number":1,
+        "id": "18"
+    },
+    { 
+        "name":"Tâm An",
+        "scr": "images/ThienTam.jpg",
+        "number":1,
+        "bio":" Đường Lê Văn việt, Thủ Đức, TP. Hồ Chí Minh, (Quán đã chuyển đến đường Man Thiện, mọi người ủng hộ quán nhá)",
+        "id": "19"
+    },
+    { 
+        "name":"77 xứ nẫu",
+        "scr": "images/XuNau.jpg",
+        "bio": "Món quê, bún mắm nêm, các loại mẹt, bánh cuốn Tây Sơn.... ",
+        "number":1,
+        "id": "20"
+    },
+    { 
+        "name":"Yên ",
+        "scr": "images/Yen.jpg",
+        "bio":"Mọi thứ rồi sẽ yên bình thôi !. Một li nước đuổi phiền muộn",
+        "number":1,
+        "id": "21"
+    },
+    { 
+        "name":"Quê tôi Long An",
+        "scr": "images/LonAn.jpg",
+        "bio":"",
+        "number":1,
+        "id": "22"
+    },
+    { 
+        "name":"Món ngon Đồng tháp",
+        "scr": "images/DongThap.jpg",
+        "bio": "",
+        "number":1,
+        "id": "23"
+    },
+    { 
+        "name":"Đặc sản Phú Yên",
+        "scr": "images/PhuYen.jpg",
+        "bio":"",
+        "number":2,
+        "id": "24,26"
+    },
+    { 
+        "name":"Người Gia Lai",
+        "scr": "images/MyHang.jpg",
+        "bio":"",
+        "number":1,
+        "id": "25"
+    },
+     { 
+        "name":"Phúc",
+        "scr": "images/Phuc.jpg",
+        "bio":"",
+        "number":1,
+        "id": "27"
     }
+
+
 ]

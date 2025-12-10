@@ -83,16 +83,19 @@
 
         <form name="Form" method="post">
 
-            <input type="email" placeholder="Your address" class="email" name="SDT">
+            <input type="text" placeholder="Your Name" class="name-input" name="name" autocomplete="name">
+
+            <input type="email" placeholder="Your address" class="email" name="Email" autocomplete="Email">
             
             <div class="password">
-                <input type="password" placeholder="password" name="password" id="passwordInput" >
+                <input type="password" placeholder="password" name="password" id="passwordInput" autocomplete="new-password"  >
 
                 <span class="password-toggle" onclick="LayKieuDuLieuTuMat()">
                     <i class="bi bi-eye-slash" id="IconMat"></i>
                 </span>
                 
             </div>
+            <a href="#" class="NhacNho"></a>
 
             <input class="SignIn" type="submit" value="Sign up" >
 
@@ -123,7 +126,7 @@
 
     </div>
     <div id="footer"></div>
-    <script src="assets/js/scriptDangNhap.js"></script>
+    <script src="assets/js/DangKy.js"></script>
 </body>
 </html>
 
