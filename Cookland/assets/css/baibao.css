@@ -899,6 +899,46 @@ nav.main-nav {
         gap: 15px;
         text-align: left;
     }
+    /* Thay đổi bố cục chính: Chuyển từ cột sang hàng (xếp chồng lên nhau) */
+    .NoiDung {
+        flex-direction: column; /* Xếp chồng cột ảnh và cột nội dung lên nhau */
+        padding-top: 55px;
+    }
+    
+    
+    .NoiDungChinh{
+        width: 100%; /* Chiều rộng cố định cho thẻ */
+        background-color: #fcf8f3; /* Màu nền nhạt như hình mẫu */
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        position: relative; /* Quan trọng để định vị author-info */
+        top: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .NoiDungPhuMoRong{
+        width: 100%; /* Chiều rộng cố định cho thẻ */
+        background-color: #fcf8f3; /* Màu nền nhạt như hình mẫu */
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        position: relative; /* Quan trọng để định vị author-info */
+        height: auto;
+        top: 10px;
+    }
+    /* Thông tin tác giả: Căn giữa hoặc điều chỉnh vị trí */
+    .author-info {
+        left: 50%;
+        transform: translateX(-50%); /* Căn giữa author-info */
+        top: 10px;
+        left: 5px
+    }
+
+    .author-text {
+        padding: 3px 8px;
+    }
+
 }
 
 /* --- 2. Media Query cho Máy tính bàn/Laptop chia nửa (Tối đa 800px) --- */

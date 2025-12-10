@@ -263,36 +263,105 @@ nav.main-nav {
     line-height: 1.6;
     color: var(--text-light);
 }
+  
+/*Gioi thieu tac gia*/
 
-/* =====================================================
-   FEATURES GRID
-   ===================================================== */
-
-/* --- Lưới 4 ô tính năng --- */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    max-width: 1200px;
+/* Container chính bao quanh toàn bộ nội dung */
+.profile-container {
+    max-width: 100%;
     margin: 0 auto;
 }
 
-/* --- Box tính năng --- */
-.feature-box {
-    background-color: #fff;
-    border: 1px solid var(--secondary-teal);
-    padding: 40px 20px;
-    border-radius: 8px;
-    transition: all 0.4s ease;
-    cursor: default;
-    position: relative;
-    overflow: hidden;
+/* Khung Profile Card chính (phần đầu trang) */
+.profile-card {
+    display: flex;
+    background-color: var(--bg-cream);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    border: 1px solid #e0d9c9;
 }
 
+/* --- 1. Ảnh đại diện --- */
+.avatar-area {
+    width: 50%;
+    height: 400px;
+    margin-right: 20px;
+}
+
+.author-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Hình tròn */
+    object-fit: cover;
+    border: 5px solid var(--white); /* Viền trắng bao quanh ảnh */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 2. Thông tin cơ bản --- */
+.info-area {
+    width: 50%;
+    height: 100%;
+}
+
+/* Khung chứa tên và số bài viết */
+.info-box {
+    background-color: var(--white);
+    padding: 15px 20px;
+    border-radius: 10px; /* Bo góc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.author-name-box span {
+    font-family: 'Dancing Script', cursive; /* Font chữ theo yêu cầu */
+    font-size: 36px;
+    font-weight: 700;
+    color: #4a2c1f;
+    margin-bottom: 10px;
+}
+
+.article-count-box span {
+    width: auto;
+    font-family: 'Dancing Script', cursive; /* Font chữ theo yêu cầu */
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a2c1f;
+}
+
+/* --- 3. Tiểu sử (Mở rộng) --- */
+.bio-area {
+    width: 100%; /* Chiếm toàn bộ chiều rộng còn lại của profile-card */
+    margin-top: 15px;
+    margin-left: -230px; /* Đẩy sang trái để căn chỉnh với khung ảnh */
+    /* Dùng flexbox để căn chỉnh hộp tiểu sử */
+   
+}
+
+.bio-box {
+    width: 100%;
+    padding: 0%;
+    margin-left: 230px; /* Lùi lại để căn chỉnh với khung bên phải */
+    /* Đảm bảo khung tiểu sử không nằm ngang hàng với ảnh/info */
+}
+
+#author-bio {
+    font-family: 'Dancing Script', cursive; /* Font chữ theo yêu cầu */
+    font-size: 18px;
+    color: var(--text-light);
+    white-space: pre-wrap; /* Giữ định dạng xuống dòng nếu có */
+}
+
+
 /* --- Box hover --- */
-.feature-box:hover {
+.info-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(131, 165, 165, 0.2);
+    border: 1px;
+    border-style: solid;
     border-color: var(--primary-orange);
 }
 
@@ -304,17 +373,8 @@ nav.main-nav {
     transition: 0.3s;
 }
 
-/* --- Icon đổi màu khi hover box --- */
-.feature-box:hover .feature-icon {
-    color: var(--primary-orange);
-}
 
-/* --- Text mô tả box --- */
-.feature-text {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--text-dark);
-}
+
 
 /*
 */
@@ -521,21 +581,6 @@ nav.main-nav {
     margin-bottom: 20px; /* Đẩy link xuống dưới */
 }
 
-/* Link Dấu ba chấm "Xem thêm" */
-.read-more-link {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    left: 47%;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-}
-
-.read-more-link:hover {
-    color: #0056b3;
-}
 
 /*Nút chia sẻ tương tác với bài viết*/
 /* Khung ngoài màu cam */
@@ -813,6 +858,22 @@ nav.main-nav {
         gap: 15px;
         text-align: left;
     }
+    /*Gioi thieu tac gia*/
+    .profile-card {
+        flex-direction: column
+    }
+
+    /* --- 1. Ảnh đại diện --- */
+    .avatar-area {
+        width: 100%;
+        height: 400px;
+    }
+
+    .info-area {
+        width: 100%;
+        border: 2px;
+    }
+
 }
 
 /* --- 2. Media Query cho Máy tính bàn/Laptop chia nửa (Tối đa 800px) --- */
@@ -880,6 +941,21 @@ nav.main-nav {
         /* Giới hạn khu vực nút ở nửa bên trái */
         width: 100%; 
     }
+
+    /*Gioi thieu tac gia*/
+    .profile-card {
+        flex-direction: column
+    }
+
+    /* --- 1. Ảnh đại diện --- */
+    .avatar-area {
+        width: 100%;
+        height: 400px;
+    }
+    .info-area {
+        width: 100%;
+        border: 2px;
+    }
 }
 
 
@@ -938,6 +1014,22 @@ nav.main-nav {
     .article-excerpt {
         /* Đảm bảo nó không bị kéo giãn quá mức khi không có cột bên cạnh */
         flex-grow: unset; 
+    }
+
+    /*Gioi thieu tac gia*/
+    .profile-card {
+        flex-direction: column
+    }
+
+    /* --- 1. Ảnh đại diện --- */
+    .avatar-area {
+        width: 100%;
+        height: 400px;
+    }
+
+    .info-area {
+        width: 100%;
+        border: 2px;
     }
 }
 

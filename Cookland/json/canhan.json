@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Mỹ Hằng",
+        "scr": "images/MyHang.jpg",
+        "number": 3,
+        "bio": "Xin chào, tôi là Mỹ Hằng, người đam mê ẩm thực truyền thống Việt Nam. Công thức của tôi luôn chú trọng đến sự tinh tế và hương vị tự nhiên.",
+        "id": "1,8,12" 
+    },
+    {
+        "name": "Khánh Duy",
+        "scr": "images/KhannhDuy.jpg",
+        "number": 5,
+        "bio": "Chuyên gia ẩm thực Thái Lan và các món Á hiện đại. Khám phá các công thức fusion độc đáo cùng tôi!",
+        "id": "2,4,6,10,15"
+    }
+]

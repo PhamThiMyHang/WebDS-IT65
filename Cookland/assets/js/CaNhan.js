@@ -105,7 +105,111 @@ document.addEventListener('DOMContentLoaded', function() {
 }); 
 
 
+/* */
+document.addEventListener('DOMContentLoaded', initCanhanPage);
 
+async function initCanhanPage() {
+    // 1. Lấy tên tác giả từ URL (query parameter)
+    const params = new URLSearchParams(window.location.search);
+    const authorName = params.get('name');
+
+
+    // Đặt tên tác giả vào tiêu đề tạm thời
+    document.getElementById('author-name').textContent = decodeURIComponent(authorName);
+
+
+    // 2. Tải và xử lý dữ liệu tác giả
+    try {
+        const response = await fetch('json/canhan.json');
+        if (!response.ok) throw new Error("Không thể tải file canhan.json.");
+        const authorsData = await response.json();
+        
+        // 3. Tìm khối dữ liệu của tác giả có tên trùng khớp
+        // Dùng decodeURIComponent để đảm bảo so sánh đúng tên (vd: Mỹ Hằng vs Mỹ%20Hằng)
+        const authorData = authorsData.find(a => a.name === decodeURIComponent(authorName));
+        
+        if (authorData) {
+            updateAuthorProfile(authorData);
+            
+            // 5. Tải và hiển thị các bài viết liên quan
+            const articleIds = authorData.id.split(',').map(id => id.trim()).filter(id => id.length > 0);
+            if (articleIds.length > 0) {
+                await fetchAndRenderArticles(articleIds);
+            } 
+
+        } 
+
+    } catch (error) {
+        console.error("Lỗi xử lý trang cá nhân:", error);
+    }
+}
+
+/**
+ * Cập nhật thông tin tác giả lên giao diện
+ */
+function updateAuthorProfile(data) {
+    document.getElementById('author-name').textContent = data.name || "Tác giả";
+    document.getElementById('author-avatar').src = data.scr || 'placeholder.jpg';
+    document.getElementById('article-count').textContent = `Số bài viết: ${data.number || 0} bài`;
+    document.getElementById('author-bio').textContent = data.bio || 'Chưa có tiểu sử.';
+}
+
+/* */
+// =======================================================
+// --- THÊM MỚI: HÀM TẢI VÀ LỌC BÀI VIẾT THEO ID (Mục đích 2) ---
+// =======================================================
+/**
+ * Tải và hiển thị danh sách bài viết dựa trên ID của tác giả
+ * @param {string[]} articleIds - Mảng chứa các ID bài viết (ví dụ: ['1', '8', '12'])
+ */
+// Lấy container cho danh sách bài viết của tác giả trên trang cá nhân
+const articlesListContainer = document.getElementById('articles-list-container');
+const feedContainer = document.getElementById('recipe-feed-container');
+const paginationContainer = document.getElementById('pagination-container');
+const imageTemplate = document.getElementById('recipe-card-template-image');
+const textTemplate = document.getElementById('recipe-card-template-text-only');
+const videoTemplate = document.getElementById('recipe-card-template-video');
+
+
+async function fetchAndRenderArticles(articleIds) {
+    // Sử dụng articlesListContainer đã định nghĩa ở trên (Mục 1)
+    if (!articlesListContainer) return; 
+
+    articlesListContainer.innerHTML = ''; // Xóa thông báo loading
+
+    try {
+        // 1. TẢI TOÀN BỘ DANH SÁCH BÀI VIẾT TỪ FILE CHUNG
+        const response = await fetch('json/congdong.json');
+        if (!response.ok) throw new Error("Không thể tải file congdong.json.");
+        const allArticles = await response.json();
+
+        // 2. CHUYỂN DANH SÁCH ID CỦA TÁC GIẢ THÀNH DẠNG SET ĐỂ TÌM KIẾM NHANH
+        const authorArticleIds = new Set(articleIds.map(String));
+
+        // 3. LỌC CÁC BÀI VIẾT CỦA TÁC GIẢ
+        const authorArticles = allArticles.filter(article => 
+            // So sánh ID bài viết (đảm bảo cả hai đều là chuỗi)
+            // Ví dụ: Tìm bài viết nào có ID là '1' hoặc '8' hoặc '12'
+            authorArticleIds.has(String(article.id)) 
+        );
+
+        if (authorArticles.length > 0) {
+            // 4. HIỂN THỊ CÁC BÀI VIẾT ĐÃ LỌC
+            authorArticles.forEach(article => {
+                // Sử dụng hàm createRecipeCard đã có sẵn ở phía dưới
+                const cardElement = createRecipeCard(article); 
+                articlesListContainer.appendChild(cardElement);
+            });
+        } else {
+            articlesListContainer.innerHTML = "<p>Tác giả này chưa có bài viết nào được công khai.</p>";
+        }
+
+    } catch (error) {
+        console.error("Lỗi khi tải hoặc lọc bài viết:", error);
+        articlesListContainer.innerHTML = `<p style="color: red;">Lỗi: Không thể tải danh sách bài viết.</p>`;
+    }
+}
+// =======================================================
 
 /* 
 */
@@ -121,12 +225,6 @@ let currentPage = 1;
 /*
 
 */
-const feedContainer = document.getElementById('recipe-feed-container');
-const paginationContainer = document.getElementById('pagination-container');
-const imageTemplate = document.getElementById('recipe-card-template-image');
-const textTemplate = document.getElementById('recipe-card-template-text-only');
-const videoTemplate = document.getElementById('recipe-card-template-video');
-
 // Hàm để tạo một bài viết từ dữ liệu và template
 function createRecipeCard(recipeData) {
     // Trong ví dụ này, tôi chỉ dùng template 'image' để minh họa.
@@ -230,100 +328,8 @@ function createRecipeCard(recipeData) {
 }
 /*
 */
-/**
- * Tải và hiển thị các công thức cho một trang cụ thể.
- * @param {number} pageNumber - Số trang cần tải (bắt đầu từ 1).
- */
-function loadRecipesForPage(pageNumber) {
-    // 1. Cập nhật trạng thái trang
-    currentPage = pageNumber;
 
-    // 2. Tính toán chỉ mục BẮT ĐẦU và KẾT THÚC
-    const startIndex = (currentPage - 1) * RECIPES_PER_PAGE;
-    // Đảm bảo endIndex không vượt quá tổng số công thức
-    const endIndex = Math.min(startIndex + RECIPES_PER_PAGE, TOTAL_RECIPES);
 
-    // 3. XÓA các bài viết cũ khỏi vùng chứa (RẤT QUAN TRỌNG)
-    feedContainer.innerHTML = '';
-    
-    // 4. Tạo DocumentFragment để tối ưu hiệu suất
-    const newElementsFragment = document.createDocumentFragment();
 
-    for (let i = startIndex; i < endIndex; i++) {
-        if (ALL_RECIPES[i]) {
-            const recipeData = ALL_RECIPES[i];
-            const recipeCard = createRecipeCard(recipeData); // Sử dụng lại hàm tạo card cũ
-            newElementsFragment.appendChild(recipeCard);
-        }
-    }
-
-    // 5. Chèn các bài viết mới vào DOM
-    feedContainer.appendChild(newElementsFragment);
-    
-    // 6. Cập nhật và tạo lại các nút phân trang
-    renderPaginationButtons();
-    
-    // Tùy chọn: Cuộn lên đầu trang sau khi tải trang mới
-    window.scrollTo(0, 0); 
-}
-
-function renderPaginationButtons() {
-    paginationContainer.innerHTML = ''; // Xóa các nút cũ
-
-    const totalPages = Math.ceil(TOTAL_RECIPES / RECIPES_PER_PAGE);
-
-    for (let i = 1; i <= totalPages; i++) {
-        const button = document.createElement('button');
-        button.textContent = i;
-        button.classList.add('page-button');
-        
-        // Đánh dấu nút trang hiện tại
-        if (i === currentPage) {
-            button.classList.add('active');
-        }
-
-        // Gán sự kiện khi click
-        button.addEventListener('click', () => {
-            loadRecipesForPage(i);
-        });
-
-        paginationContainer.appendChild(button);
-    }
-}
-
-async function init() {
-    try {
-        // Tải dữ liệu từ file JSON (Đảm bảo file recipes.json nằm đúng chỗ)
-        const response = await fetch('json/congdong.json'); 
-        
-        // Xử lý lỗi nếu tải không thành công (Ví dụ: File không tồn tại hoặc lỗi mạng)
-        if (!response.ok) {
-            // Thông báo lỗi cụ thể hơn nếu không tìm thấy file 404
-            throw new Error(`Lỗi tải dữ liệu: ${response.status} (${response.statusText}). Đảm bảo file recipes.json tồn tại và ứng dụng chạy trên Local Server.`);
-        }
-        
-        // Chuyển đổi phản hồi thành đối tượng JavaScript
-        const data = await response.json();
-        
-        // Cập nhật các biến toàn cục với dữ liệu thực tế
-        ALL_RECIPES = data;
-        TOTAL_RECIPES = ALL_RECIPES.length;
-
-        // Bắt đầu bằng cách tải TRANG 1
-        loadRecipesForPage(1); 
-
-    } catch (error) {
-        console.error('Lỗi nghiêm trọng khi khởi tạo:', error);
-        // Hiển thị thông báo lỗi thân thiện cho người dùng trên giao diện
-        if (feedContainer) {
-             feedContainer.innerHTML = `<div style="padding: 20px; color: red; text-align: center; border: 1px solid red; margin: 20px;">
-                                           <strong>LỖI TẢI DỮ LIỆU:</strong> Không thể tải công thức. Vui lòng kiểm tra console để xem chi tiết.
-                                       </div>`;
-        }
-    }
-}
-
-// Gọi hàm khởi tạo khi DOM đã sẵn sàng
-document.addEventListener('DOMContentLoaded', init);
 
 
