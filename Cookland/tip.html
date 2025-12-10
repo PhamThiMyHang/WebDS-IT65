@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết mẹo vặt - Cookland</title>
+  
+  <!-- CSS riêng cho trang chi tiết mẹo vặt -->
+  <link rel="stylesheet" href="assets/css/tip.css">
+  
+  <!-- Font chung của toàn bộ web -->
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Chỗ chèn header chung (menu, logo…) từ file header.html -->
+  <div id="header"></div>
+  
+  <!-- Phần tiêu đề + nút quay lại của trang chi tiết -->
+  <header class="header">
+    <h1 class="title">Cookland</h1>
+    
+    <!-- Nút quay lại trang danh sách mẹo -->
+    <!-- tip.js sẽ bắt id="smartBack" để dùng history.back() thay vì reload trang -->
+    <a href="tips.html" class="back-link" id="smartBack">Quay lại danh sách mẹo</a>
+  </header>
+
+  <!-- Nội dung chính -->
+  <main class="wrap">
+    <!-- Khung chứa toàn bộ chi tiết mẹo vặt (ảnh, tiêu đề, nội dung…) -->
+    <!-- tip.js sẽ tự động render toàn bộ nội dung vào đây -->
+    <div id="recipeContainer" class="recipe-box">
+      <!-- Nội dung mẹo sẽ được JS thay thế vào đây -->
+    </div>
+  </main>
+  
+  <!-- Chỗ chèn footer chung (copyright, liên hệ…) từ file footer.html -->
+  <div id="footer"></div>
+
+  <!-- Chèn header & footer từ file riêng -->
+  <script>
+    // 1. Nhúng header.html vào #header
+    fetch('header.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+
+        // Sau khi header đã chèn xong → chạy JS của header (menu mobile, slider...)
+        const headerScript = document.createElement('script');
+        headerScript.src = 'assets/js/scriptheader.js';
+        document.body.appendChild(headerScript);
+      })
+      .catch(() => console.log("Lỗi load header – vẫn chạy bình thường"));
+
+    // 2. Nhúng footer.html vào #footer
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      })
+      .catch(() => console.log("Lỗi load footer – vẫn chạy bình thường"));
+  </script>
+  
+  <!-- File JS chính của trang chi tiết mẹo vặt -->
+  <!-- Chứa: lấy id từ URL → tìm mẹo → render ảnh + tiêu đề + nội dung + smart back -->
+  <script src="assets/js/tip.js"></script>
+</body>
+</html>
