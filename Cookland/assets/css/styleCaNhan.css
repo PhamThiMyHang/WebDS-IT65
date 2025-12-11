@@ -533,12 +533,12 @@ nav.main-nav {
     min-width: 300px; /* Đảm bảo kích thước tối thiểu */
     border: 1px solid #ccc; /* Khung chữ nhật bao quanh */
     width: 50%;
-    max-height: 400px;
+   /* max-height: 400px;*/
 }
 
 .recipe-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     /* Dòng dưới đây là để hình ảnh lấp đầy khung mà không cần bo góc */
 }
@@ -610,7 +610,7 @@ nav.main-nav {
 
 /* Định dạng chung cho các nút */
 .icon-button {
-    width: 24%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -873,6 +873,13 @@ nav.main-nav {
         width: 100%;
         border: 2px;
     }
+    /*Khu vực tương tác*/
+    .interaction-buttons-container {
+        display: flex;
+        gap: 4%; /* Khoảng cách giữa các nút */
+        /* Giới hạn khu vực nút ở nửa bên trái */
+        width: 100%; 
+    }
 
 }
 
@@ -1030,6 +1037,13 @@ nav.main-nav {
     .info-area {
         width: 100%;
         border: 2px;
+    }
+    /*Khu vực tương tác */
+    .interaction-buttons-container {
+        display: flex;
+        gap: 4%; /* Khoảng cách giữa các nút */
+        /* Giới hạn khu vực nút ở nửa bên trái */
+        width: 100%; 
     }
 }
 

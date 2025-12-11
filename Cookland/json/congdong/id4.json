@@ -4,20 +4,7 @@
     "name": "Khanhs Duy",
     "time": "25/12/2025",
     "blocks": [
-        {
-            "type": "paragraph",
-            "content": "" },
-        {
-            "type": "image",
-            "src": "",
-            "alt": "",
-            "caption": ""
-        },
-        {
-            "type": "heading",
-            "level": 2,
-            "content": ""
-        },
+       
         {
             "type": "paragraph",
             "content": "Phở bò – Món ăn không chỉ là niềm tự hào của ẩm thực Việt Nam mà còn là biểu tượng văn hóa được cả thế giới biết đến. Từng sợi phở mềm mịn hòa quyện cùng nước dùng trong veo, ngọt thanh từ xương bò, cộng thêm vị thơm bùi của thịt bò tái chín, tất cả tạo nên một hương vị đặc trưng khó quên." 
@@ -105,11 +92,7 @@
             "content": "Xương bò tươi và nước dùng trong: Xương bò tươi và việc ninh nước dùng lâu là bí quyết tạo nên hương vị ngọt thanh, đặc trưng cho món phở. Hãy chọn xương bò còn tươi và ninh thật kỹ để có nước dùng trong veo, ngọt đậm đà." },
             {
             "type": "paragraph",
-            "content": "Gia vị đúng chuẩn: Hương thơm của quế, hồi, đinh hương và thảo quả là yếu tố quan trọng tạo nên hương vị phở bò chuẩn vị. Đừng quên nướng gừng và hành tây để gia vị thêm phần đậm đà" },
+            "content": "Gia vị đúng chuẩn: Hương thơm của quế, hồi, đinh hương và thảo quả là yếu tố quan trọng tạo nên hương vị phở bò chuẩn vị. Đừng quên nướng gừng và hành tây để gia vị thêm phần đậm đà" }
 
-        {
-            "type": "video",
-            "embedUrl": "https://www.youtube.com/watch?v=QiCQKOORS_0"
-        }
     ]
 }

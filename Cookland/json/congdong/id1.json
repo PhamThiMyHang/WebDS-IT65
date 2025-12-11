@@ -10,7 +10,7 @@
         },
         {
             "type": "image",
-            "src": "images/bun-cha-ha-noi-1.jpg",
+            "src": "assets/images/bun-cha-ha-noi-1.jpg",
             "alt": "Bún chả Hà Nội",
             "caption": "Bún chả Hà Nội"
         },
@@ -79,7 +79,7 @@
         },
         {
             "type": "image",
-            "src": "images/bun-cha-ha-noi-2.jpg",
+            "src": "assets/images/bun-cha-ha-noi-2.jpg",
             "alt": "Thịt viên",
             "caption": "Thịt viên"
         },
@@ -106,7 +106,7 @@
         },
         {
             "type": "image",
-            "src": "images/bun-cha-ha-noi-3.jpg",
+            "src": "assets/images/bun-cha-ha-noi-3.jpg",
             "alt": "Nguyên liệu",
             "caption": "Nguyên liệu"
         },
@@ -121,7 +121,7 @@
         },
          {
             "type":"image",
-            "src": "images/bun-cha-ha-noi-4.jpg",
+            "src": "assets/images/bun-cha-ha-noi-4.jpg",
             "alt": "Nuong thit",
             "caption": "Nướng thịt"
         },
@@ -136,7 +136,7 @@
          },
          {
             "type":"image",
-            "src": "images/bun-cha-ha-noi-5.jpg",
+            "src": "assets/images/bun-cha-ha-noi-5.jpg",
             "alt": "Nước chấm",
             "caption": "Linh hồn của nón ăn"
         },
@@ -155,7 +155,7 @@
         },
         {
             "type":"image",
-            "src": "images/bun-cha-ha-noi-6.jpg",
+            "src": "assets/images/bun-cha-ha-noi-6.jpg",
             "alt": "Thành phẩm",
             "caption": "Thành phẩm"
         },

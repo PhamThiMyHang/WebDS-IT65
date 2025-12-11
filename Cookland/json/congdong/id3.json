@@ -1,39 +1,151 @@
 {
     "id": 3,
-    "title": "Gợi ý món ăn tối",
-    "name":"Mai Đào",
+    "title": "Công thức làm bánh flan",  
+    "name": "Khanhs Duy",
     "time": "25/12/2025",
     "blocks": [
-        {
-            "type": "paragraph",
-            "content": "Bún chả không chỉ là một món ăn, mà còn là linh hồn ẩm thực của Hà Nội. Sự kết hợp giữa thịt nướng thơm lừng, nước chấm chua ngọt đậm đà và bún tươi mát tạo nên một trải nghiệm khó quên."
-        },
+        
+        
         {
             "type": "image",
-            "src": "images/bun-cha-nuoc-mam.jpg",
-            "alt": "Nước chấm bún chả hoàn hảo",
-            "caption": "Nước chấm là yếu tố quyết định sự thành công của món bún chả."
+            "src": "assets/images/Banh-flan-1.jpg",
+            "alt": "Bánh Flan",
+            "caption": "Bánh Flan"
         },
         {
-            "type": "heading",
-            "level": 2,
-            "content": "Nguyên liệu cần chuẩn bị"
+            "type": "paragraph",
+            "content":"Bánh flan có vị béo của trứng và mùi thơm từ sữa, khi ăn mềm tan trong miệng dễ dàng chinh phục khẩu vị của bất cứ ai, từ trẻ em cho tới người lớn. "
+        },
+        {
+            "type": "paragraph",
+            "content":"Chuẩn bị: 30 phút    Chế biến: 30 phút      Độ khó: Dễ"
         },
         {
             "type": "list",
             "items": [
-                "500g thịt ba chỉ",
-                "300g thịt nạc vai xay",
-                "Gia vị ướp (nước mắm, đường, tiêu...)"
+                "Trứng gà 4 quả",
+                "Lòng đỏ trứng gà 6 cái",
+                "Sữa tươi không đường 500 ml",
+                "Đường 170 gr",
+                "Nước cốt chanh 1 muỗng canh",
+                "Nước 170 ml"
             ]
         },
         {
-            "type": "paragraph",
-            "content": "Việc nướng thịt trên than hoa sẽ cho hương vị truyền thống nhất. Lưu ý không nướng quá lâu để thịt không bị khô."
+            "type": "heading",
+            "level": 2,
+            "content": "Đun caramel"
         },
         {
-            "type": "video",
-            "embedUrl": "https://www.youtube.com/embed/bunChaTutorial"
+            "type": "paragraph",
+            "content":"Đầu tiên, cho vào nồi 120gr đường, 100ml nước rồi đun sôi (không khuấy) trên bếp với lửa nhỏ nhất."
+        },
+        {
+            "type": "paragraph",
+            "content":"Khi thấy nước đường hơi ngả màu vàng nhạt, bạn cho vào thêm 1 muỗng canh nước cốt chanh. Tiếp tục nấu đến khi đường chuyển thành màu nâu cánh gián thì tắt bếp."
+        },
+        {
+            "type": "paragraph",
+            "content":"Kế đến, cho vào nồi 70ml nước lọc, cầm nồi lắc tròn cho hỗn hợp hòa quyện với nhau."
+        },
+        {
+            "type": "paragraph",
+            "content":"Cuối cùng, đổ 1 muỗng canh caramel vừa làm vào từng khuôn bán flan và để trong ngăn mát tủ lạnh cho đông lại."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/Banh-flan-2.jpg",
+            "alt": "Đun Caramel",
+            "caption": "Đun Caramel"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Khuấy hỗn hợp trứng sữa"
+        },
+        {
+            "type": "paragraph",
+            "content":"Cho vào tô 6 lòng đỏ trứng, 4 quả trứng (cả lòng đỏ và lòng trắng), 50gr đường rồi khuấy nhẹ nhàng theo một chiều và tránh để tạo nhiều bọt khí."
+        },
+        {
+            "type": "paragraph",
+            "content":"Tiếp đến, bạn đun 500ml sữa tươi không đường đến khi mặt sữa bốc hơi nóng (không đun sôi). Sau đó đổ từ từ sữa vào tô trứng, vừa đổ vừa khuấy cho hòa quyện."
+        },
+        {
+            "type": "paragraph",
+            "content":"Cuối cùng, lọc hỗn hợp trứng sữa qua rây để loại bỏ cặn và sánh mịn hơn."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/Banh-flan-3.jpg",
+            "alt": "Khuấy",
+            "caption": "Khuấy hỗn hợp từ trứng"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Đổ khuôn bánh"
+        },
+        {
+            "type": "paragraph",
+            "content":"Đổ từ từ hỗn hợp sữa trứng vào khuôn bánh caramel, bạn nhớ nghiêng khuôn và rót nhẹ để không tạo bọt khí, nếu không bánh sẽ bị rỗ sau khi hấp"
+        },
+        {
+            "type": "paragraph",
+            "content":"Tiếp theo, đậy kín nắp khuôn bánh lại."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/Banh-flan-4.jpg",
+            "alt": "Đổ",
+            "caption": "Đổ vào khuôn bánh"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Hấp bánh"
+        },
+        {
+            "type": "paragraph",
+            "content":"Kế đến, xếp bánh vào xửng, đặt xửng lên 1 nồi nước sôi. Đậy nắp nồi và hấp bánh trên lửa nhỏ vừa trong vòng 20 phút."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/Banh-flan-5.jpg",
+            "alt": "Hấp bánh",
+            "caption": "Hấp bánh"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Thành phẩm"
+        },
+        {
+            "type": "image",
+            "src": "assets/images/Banh-flan-1.jpg",
+            "alt": "Thành phẩm",
+            "caption": "Thành phẩm "
+        },
+        {
+            "type": "paragraph",
+            "content":"Bánh flan sữa tươi siêu láng mịn và không bị rỗ, từng muỗng bánh mềm mại, béo ngậy quyện đều với caramel ngọt thơm, cực kỳ ngon đó nha."
+        },
+        {
+            "type": "paragraph",
+            "content":"Bạn có thể dùng kèm bánh với đá viên đập nhuyễn và một ít cà phê sẽ càng thêm hấp dẫn hơn đấy!"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Mẹo làm bánh flan không bị rỗ"
+        },
+        {
+            "type": "paragraph",
+            "content":"Khi hấp bạn có thể dùng 1 cái khăn thấm nước tốt đậy phủ lên các khuôn bánh flan rồi đậy nắp lại, hoặc bọc mỗi khuôn bánh flan bằng giấy bạc rồi hấp. Cứ 10 - 15 phút bạn nên mở nắp lau sạch phần hơi nước bám trên nắp nồi. Như vậy bánh flan sẽ không bị rỗ trên bề mặt bánh."
+        },
+        {
+            "type": "paragraph",
+            "content":"Đối với những trường hợp bánh flan bị rỗ bên trong, bạn có thể xử lý bằng cách dùng xửng hấp, hấp với lửa thật nhỏ. Trường hợp nhà bạn không có xửng hấp, phải đặt trực tiếp khuôn bánh vào nồi, thì nên lót một cái khăn và bọc giấy bạc xung quanh khuôn bánh, để khi hấp hạn chế tình trạng hỗn hợp sữa trứng bị sôi gây rỗ đáy và rỗ bên trong bánh."
         }
     ]
 }

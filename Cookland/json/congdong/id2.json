@@ -6,13 +6,13 @@
     "blocks": [
         {
             "type": "paragraph",
-            "content": "Bún chả không chỉ là một món ăn, mà còn là linh hồn ẩm thực của Hà Nội. Sự kết hợp giữa thịt nướng thơm lừng, nước chấm chua ngọt đậm đà và bún tươi mát tạo nên một trải nghiệm khó quên."
+            "content": "Mách bạn làm bánh xèo vỏ chuẩn vị đặc sản Bình Định chỉ với vài nguyên liệu dễ mua và rẻ tiền." 
         },
         {
             "type": "image",
-            "src": "images/bun-cha-nuoc-mam.jpg",
-            "alt": "Nước chấm bún chả hoàn hảo",
-            "caption": "Nước chấm là yếu tố quyết định sự thành công của món bún chả."
+            "src": "assets/images/Banh-xeo-1.jpg",
+            "alt": "bánh xèo",
+            "caption": "Bánh xèo Bình Định."
         },
         {
             "type": "heading",
@@ -22,18 +22,85 @@
         {
             "type": "list",
             "items": [
-                "500g thịt ba chỉ",
-                "300g thịt nạc vai xay",
-                "Gia vị ướp (nước mắm, đường, tiêu...)"
+                 "Gạo 1 kg",
+ "Muối 1/2 muỗng cà phê",
+" Hành lá 1 ít",
+ "Dầu ăn 1 ít"
             ]
         },
         {
+            "type": "heading",
+            "level": 2,
+            "content": "Xe Gạo"
+        },
+        {
             "type": "paragraph",
-            "content": "Việc nướng thịt trên than hoa sẽ cho hương vị truyền thống nhất. Lưu ý không nướng quá lâu để thịt không bị khô."
+            "content":"Đầu tiên, bạn vo sạch gạo rồi ngâm nước qua đêm cho mềm." 
+        },
+        {
+            "type": "paragraph",
+            "content":"Kế đến, bạn chắt bỏ nước ngâm, cho gạo vào máy sinh tố cùng 1 ít nước lọc rồi xay nhuyễn." 
+        },
+        {
+            "type": "image",
+            "src": "assets/images/Banh-xeo-2.jpg",
+            "alt": "Xe gạo",
+            "caption": "Xe gạo."
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Pha bột"
+        },
+        {
+            "type": "paragraph",
+            "content":"Tiếp theo, cho vào hỗn hợp bột 1/2 muỗng cà phê muối, 1 ít hành lá cắt nhỏ rồi khuấy đều." 
+        },
+        
+        {
+            "type": "image",
+            "src": "assets/images/Banh-xeo-3.jpg",
+            "alt": "Pha bột",
+            "caption": "Pha bột."
+        },
+         {
+            "type": "heading",
+            "level": 2,
+            "content": "Đổ bánh"
+        },
+        {
+            "type": "paragraph",
+            "content":"Bắc chảo lên bếp, cho vào 1 ít dầu ăn rồi làm nóng trên lửa vừa."
+        },
+        {
+            "type": "paragraph",
+            "content":"Khi chảo nóng, bạn cho vào 1 ít bột bánh xèo rồi chiên trên lửa vừa đến khi bánh giòn là chín."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/Banh-xeo-4.jpg",
+            "alt": "Đổ bánh",
+            "caption": "Đổ bánh."
+        },
+         
+         {
+            "type": "heading",
+            "level": 2,
+            "content": "Thành phẩm"
+        },
+        {
+            "type": "paragraph",
+            "content":"Bánh xèo vỏ ăn vào mềm dai, bùi bùi, dùng kèm với rau sống, thịt luộc và nước mắm nêm sẽ giúp cho món ăn càng thơm ngon, đậm đà hơn."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/Banh-xeo-4,jpg",
+            "alt": "Đổ bánh",
+            "caption": "Đổ bánh."
         },
         {
             "type": "video",
-            "embedUrl": "https://www.youtube.com/embed/bunChaTutorial"
+            "embedUrl": "https://www.youtube.com/watch?v=kXQcuujYM5U"
         }
     ]
 }

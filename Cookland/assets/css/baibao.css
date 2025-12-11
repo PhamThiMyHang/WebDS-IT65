@@ -220,6 +220,8 @@ nav.main-nav {
     display: flex;
     overflow: auto;
     min-height: 100%;
+    position: relative;
+    left: -55px;
     margin: 10px 50px;
 
 }
@@ -517,7 +519,7 @@ nav.main-nav {
 
 /* Định dạng chung cho các nút */
 .icon-button {
-    width: 24%;
+    width: 30%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -938,6 +940,13 @@ nav.main-nav {
     .author-text {
         padding: 3px 8px;
     }
+    /*Khu vực tương tác */
+    .interaction-buttons-container {
+        display: flex;
+        gap: 4%; /* Khoảng cách giữa các nút */
+        /* Giới hạn khu vực nút ở nửa bên trái */
+        width: 100%; 
+    }
 
 }
 
@@ -1035,6 +1044,13 @@ nav.main-nav {
 
     .author-text {
         padding: 3px 8px;
+    }
+    /*Khu vực tương tác */
+    .interaction-buttons-container {
+        display: flex;
+        gap: 4%; /* Khoảng cách giữa các nút */
+        /* Giới hạn khu vực nút ở nửa bên trái */
+        width: 100%; 
     }
 
 }

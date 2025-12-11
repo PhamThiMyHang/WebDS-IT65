@@ -4,15 +4,20 @@
     "name": "Ngọc Hà",
     "time": "25/12/2025",
     "blocks": [
+        
         {
             "type": "paragraph",
-            "content": "Bún chả không chỉ là một món ăn, mà còn là linh hồn ẩm thực của Hà Nội. Sự kết hợp giữa thịt nướng thơm lừng, nước chấm chua ngọt đậm đà và bún tươi mát tạo nên một trải nghiệm khó quên."
+            "content": "Gỏi cuốn tôm thịt là món ngon hấp dẫn, có độ dinh dưỡng cao và thích hợp cho những ngày mà bạn cảm thấy ngán cơm, thì đây là sự lựa chọn hoàn hảo."
+        },
+        {
+            "type": "paragraph",
+            "content": "Chuẩn bị:10 phút    Chế biến :30 phút      Độ khó: Dễ"
         },
         {
             "type": "image",
-            "src": "images/bun-cha-nuoc-mam.jpg",
-            "alt": "Nước chấm bún chả hoàn hảo",
-            "caption": "Nước chấm là yếu tố quyết định sự thành công của món bún chả."
+            "src": "assets/images/GoiCuon.jpg",
+            "alt": "Gỏi cuốn",
+            "caption": "Gỏi cuốn"
         },
         {
             "type": "heading",
@@ -22,14 +27,147 @@
         {
             "type": "list",
             "items": [
-                "500g thịt ba chỉ",
-                "300g thịt nạc vai xay",
-                "Gia vị ướp (nước mắm, đường, tiêu...)"
+                " Thịt heo 300 gr",
+                "Hẹ 10 nhánh",
+                "Ớt 2 trái",
+                " Tỏi 1 củ",
+                "Bún tươi 200 gr",
+                "Bánh tráng mỏng 300 gr",
+                "Nước cốt chanh 3 muỗng canh",
+                "Rau ăn kèm 1 ít",
+                "Nước mắm 5 muỗng canh",
+                "Muối/ đường 1 ít"
             ]
         },
         {
+            "type": "heading",
+            "level": 2,
+            "content": "1. Sơ chế thịt heo"
+        },
+        {
             "type": "paragraph",
-            "content": "Việc nướng thịt trên than hoa sẽ cho hương vị truyền thống nhất. Lưu ý không nướng quá lâu để thịt không bị khô."
+            "content": "Thịt heo mua về rửa sạch với nước, để khử mùi hôi của thịt, bạn dùng 1 ít muối chà xát xung quanh miếng thịt rồi rửa lại 2 - 3 lần với nước, sau đó vớt ra để ráo."
+        },
+        {
+            "type": "paragraph",
+            "content": "Tiếp đến, bạn cho thịt vào nồi đổ ngập nước, thêm vào 1 muỗng cà phê muối rồi đặt nồi lên bếp đun với lửa lớn. Khi nước sôi tầm 3 - 5 phút thì tắt bếp."
+        },
+        {
+            "type": "paragraph",
+            "content": "Để loại bỏ các chất bẩn bám trên bề mặt thịt, cũng như giúp cho thịt sẽ trong hơn, khi vớt thịt ra bạn sẽ rửa thịt lại qua với nước lạnh."
+        },
+        {
+            "type": "paragraph",
+            "content": "Tiếp đến, bạn bắc nồi lên bếp, cho thịt đã chần lúc nãy vào, đổ nước ngập phần thịt rồi thêm vào 1 muỗng cà phê muối, vặn lửa vừa luộc thịt tầm 30 - 40 phút cho tới khi thịt đã chín mềm, thì tắt bếp vớt thịt ra dĩa, để nguội sau đó cắt thịt thành từng lát mỏng vừa ăn."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/GoiCuon-1.jpg",
+            "alt": "Sơ chế thịt heo",
+            "caption": "Sơ chế thịt heo"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "2. Sơ chế tôm"
+        },
+        {
+            "type": "paragraph",
+            "content": "Tôm mua về bạn có thể để nguyên con hoặc cắt bỏ đầu tùy ý thích, rửa lại vài lần với nước rồi cho vào nồi."
+        },
+        {
+            "type": "paragraph",
+            "content": "Bắc nồi lên bếp thêm 1 ít nước, đậy nắp, mở lửa vừa, nấu cho tôm chuyển sang màu đỏ và chú ý phải đảo đều."
+        },
+        {
+            "type": "paragraph",
+            "content": "Sau đó bạn vớt tôm ra để nguội, bóc sạch vỏ, cắt đôi tôm theo chiều dọc theo sống lưng và bỏ chỉ lưng của tôm, rồi xếp tôm ra dĩa."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/GoiCuon-2.jpg",
+            "alt": "Sơ chế tôm",
+            "caption": "Sơ chế tôm"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "3. Sơ chế các nguyên liệu khác"
+        },
+        {
+            "type": "paragraph",
+            "content": "Hẹ mua về cắt bỏ gốc, rửa sạch. Rau sống ăn kèm nhặt lá tươi ngon, đem ngâm với nước muối pha loãng khoảng 10 phút sau đó rửa lại vài lần với nước rồi vớt ra rổ để ráo."
+        },
+        {
+            "type": "paragraph",
+            "content": "Tỏi bóc sạch vỏ, ớt bỏ cuống, rửa sơ qua với nước rồi băm nhuyễn."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/GoiCuon-3.jpg",
+            "alt": "Các nguyên liệu khác",
+            "caption": "Các nguyên liệu khác"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "4. Cuốn gỏi"
+        },
+        {
+            "type": "paragraph",
+            "content": "Trải bánh tráng mỏng ra dĩa, thấm sơ 1 ít nước lên bánh tráng cho dễ cuốn, sau đó xếp rau sống, bún tươi, thịt, tôm, hẹ lên rồi cuộn tất cả các nguyên liệu lại cho chắc tay là được."
+        },
+        {
+            "type": "paragraph",
+            "content": "Cứ như vậy bạn thực hiện cho đến khi hết phần nguyên liệu nhé."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/GoiCuon-4.jpg",
+            "alt": "Cuốn",
+            "caption": "Cuốn"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "5. Làm nước chấm"
+        },
+        {
+            "type": "paragraph",
+            "content": "Cho vào chén 2 muỗng canh đường, thêm vào 2 muỗng canh nước lọc khuấy đều cho đường tan hết thì cho vào 3 muỗng canh nước cốt chanh, 5 muỗng canh nước mắm tiếp tục khuấy đều."
+        },
+        {
+            "type": "paragraph",
+            "content": "Cuối cùng cho toàn bộ phần tỏi, ớt đã băm nhuyễn vào vậy là đã hoàn thành xong phần nước chấm."
+        },
+        {
+            "type": "image",
+            "src": "assets/images/GoiCuon-5.jpg",
+            "alt": "Nước chấm",
+            "caption": "Nước chấm"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Thành phẩm"
+        },
+        {
+            "type": "paragraph",
+            "content": "Bạn bày gỏi cuốn tôm thịt cùng với nước chấm ra và mời mọi người cùng thưởng thức thôi nào."
+        },
+        {
+            "type": "paragraph",
+            "content": "Gỏi cuốn tôm thịt là món ngon có đầy đủ chất dinh dưỡng lại rất dễ ăn, không bị ngán nên đặc biệt thích hợp cho bạn cải thiện ẩm thực cuối tuần của gia đình mình."
+        },
+        {
+            "type": "paragraph",
+            "content": "Chấm cùng với nước mắm chua ngọt quả là ngon hết sẩy. Cùng vào bếp thực hiện ngay nhé!"
+        },
+        {
+            "type": "image",
+            "src": "",
+            "alt": "",
+            "caption": "."
         },
         {
             "type": "video",

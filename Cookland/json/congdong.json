@@ -1,67 +1,67 @@
 [
     { 
         "name":"Mỹ Hằng",
-        "scr": "images/MyHang.jpg",
+        "scr": "assets/images/MyHang.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 1,
-        "title": "Bún chả Hà Nội", 
-        "excerpt": "Món bún chả thơm lừng, đậm đà hương vị truyền thống Hà Nội.", 
+        "title": "Bún chả Hà Nội - Công thức Gia truyền", 
+        "excerpt": "Bún chả không chỉ là một món ăn, mà còn là linh hồn ẩm thực của Hà Nội. Sự kết hợp giữa thịt nướng thơm lừng, nước chấm chua ngọt đậm đà và bún tươi mát tạo nên một trải nghiệm khó quên.", 
         "type": "image", 
-        "imageSrc": "bun-cha.jpg" 
+        "imageSrc": "assets/images/bun-cha-ha-noi-1.jpg" 
     },
     { 
         "name":"Khánh Duy",
-        "scr": "images/KhanhDuy.jpg",
+        "scr": "assets/images/KhanhDuy.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 2, 
         "title": "Cách làm bánh xèo", 
-        "excerpt": "Bí quyết làm vỏ bánh giòn tan, nhân tôm thịt đầy đặn, kèm rau sống và nước chấm chua ngọt.", 
-        "type": "video", 
-        "videoEmbedUrl": "https://www.youtube.com/embed/exampleVideoID" 
+        "excerpt": "Mách bạn làm bánh xèo vỏ chuẩn vị đặc sản Bình Định chỉ với vài nguyên liệu dễ mua và rẻ tiền..Bí quyết làm vỏ bánh giòn tan, nhân tôm thịt đầy đặn, kèm rau sống và nước chấm chua ngọt.", 
+        "type": "image", 
+        "imageSrc": "assets/images/Banh-xeo-1.jpg" 
     },
     { 
         "name":"Mai Đào",
-        "scr": "images/MaiDao.jpg",
+        "scr": "assets/images/MaiDao.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
-        "id": 3, 
+        "id": 6, 
         "title": "Gợi ý món ăn tối", 
         "excerpt": "Danh sách 10 món ăn tối đơn giản, dễ làm tại nhà, tiết kiệm thời gian.", 
         "type": "text-only" 
     },
     { 
         "name":"Khánh Duy",
-        "scr": "images/KhanhDuy.jpg",
+        "scr": "assets/images/KhanhDuy.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 4, 
         "title": "Phở bò truyền thống", 
         "excerpt": "Nước dùng phở ngọt thanh, bò tái mềm, bánh phở dai ngon.", 
         "type": "image", 
-        "imageSrc": "pho-bo.jpg" 
+        "imageSrc": "assets/images/recipes/bun-bo-hue.jpg" 
     },
     { 
         "name":"Ngọc Giauf",
-        "scr": "images/NgocGiau.jpg",
+        "scr": "assets/images/NgocGiau.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 5, 
         "title": "Tips xuống bếp", 
         "excerpt": "", 
-        "type": "video", 
-        "videoEmbedUrl": "https://www.youtube.com/embed/anotherExampleVideoID" 
+        "type": "text-only"
     },
     { 
         "name":"Khánh Duy",
-        "scr": "images/KhanhDuy.jpg",
+        "scr": "assets/images/KhanhDuy.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
-        "id": 6, 
+        "id": 3, 
         "title": "Công thức làm bánh flan", 
         "excerpt": "Món tráng miệng mềm mịn, béo ngậy.", 
-        "type": "text-only" 
+        "type": "image", 
+        "imageSrc": "assets/images/Banh-flan-1.jpg"
     },
     { 
         "name":"Ngọc Hà",
@@ -72,22 +72,22 @@
         "title": "GỎI CUỐN TÔM THỊT", 
         "excerpt": "Món ăn đường phố quen thuộc khắp nẻo Sài Thành.", 
         "type": "image", 
-        "imageSrc": "GoiCuon.jpg" 
+        "imageSrc": "assets/images/GoiCuon.jpg" 
     },
     { 
         "name":"Mỹ Hằng",
-        "scr": "images/MyHang.jpg",
+        "scr": "assets/images/MyHang.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 8, 
-        "title": "Cà ri gà kiểu Thái", 
+        "title": "Gỏi cuốn", 
         "excerpt": "Cay nồng, đậm đà hương vị.", 
-        "type": "video", 
-        "videoEmbedUrl": "https://www.youtube.com/embed/thaiCurryVideo" 
+        "type": "image", 
+        "imageSrc": "assets/images/recipes/goi-cuon.jpg"
     },
     { 
         "name":"Panda",
-        "scr": "images/Panda.jpg",
+        "scr": "assets/images/Panda.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 9, 
@@ -97,18 +97,18 @@
     },
     { 
         "name":"Khánh Duy",
-        "scr": "images/KhanhDuy.jpg",
+        "scr": "assets/images/KhanhDuy.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 10, 
-        "title": "Bún chả Hà Nội", 
+        "title": "Thịt kho tàu", 
         "excerpt": "Món bún chả thơm lừng, đậm đà hương vị truyền thống Hà Nội.", 
         "type": "image", 
-        "imageSrc": "bun-cha.jpg" 
+        "imageSrc": "assets/images/recipes/goi-cuon.jpg" 
     },
     { 
         "name":"Tuấn Anh",
-        "scr": "images/TuanAnh.jpg",
+        "scr": "assets/images/TuanAnh.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 11, 
@@ -119,7 +119,7 @@
     },
     { 
         "name":"Mỹ Hằng",
-        "scr": "images/MyHang.jpg",
+        "scr": "assets/images/MyHang.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 12, 
@@ -129,7 +129,7 @@
     },
     { 
         "name":"DER",
-        "scr": "images/Der.jpg",
+        "scr": "assets/images/Der.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 13, 
@@ -140,7 +140,7 @@
     },
     { 
         "name":"chokker",
-        "scr": "images/chokker.jpg",
+        "scr": "assets/images/chokker.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 14, 
@@ -151,7 +151,7 @@
     },
     { 
         "name":"Khánh Duy",
-        "scr": "images/KhanhDuy.jpg",
+        "scr": "assets/images/KhanhDuy.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 15, 
@@ -161,7 +161,7 @@
     },
     { 
         "name":"Nguyễn Văn ",
-        "scr": "images/NguyenVan.jpg",
+        "scr": "assets/images/NguyenVan.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 16, 
@@ -172,7 +172,7 @@
     },
     { 
         "name":"ABCD",
-        "scr": "images/ABCD.jpg",
+        "scr": "assets/images/ABCD.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 17, 
@@ -183,7 +183,7 @@
     },
     { 
         "name":"PéMin",
-        "scr": "images/PéMin.jpg",
+        "scr": "assets/images/PéMin.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 18, 
@@ -193,7 +193,7 @@
     },
     { 
         "name":"Thiện Tâm",
-        "scr": "images/ThienTam.jpg",
+        "scr": "assets/images/ThienTam.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 19, 
@@ -204,7 +204,7 @@
     },
     { 
         "name":"77 xứ nẫu",
-        "scr": "images/XuNau.jpg",
+        "scr": "assets/images/XuNau.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 20, 
@@ -215,7 +215,7 @@
     },
     { 
         "name":"Yên ",
-        "scr": "images/Yen.jpg",
+        "scr": "assets/images/Yen.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 21, 
@@ -225,7 +225,7 @@
     },
     { 
         "name":"Quê tôi Long An",
-        "scr": "images/LonAn.jpg",
+        "scr": "assets/images/LonAn.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 22, 
@@ -236,7 +236,7 @@
     },
     { 
         "name":"Món ngon Đồng tháp",
-        "scr": "images/DongThap.jpg",
+        "scr": "assets/images/DongThap.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 23, 
@@ -247,7 +247,7 @@
     },
     { 
         "name":"Đặc sản Phú Yên",
-        "scr": "images/PhuYen.jpg",
+        "scr": "assets/images/PhuYen.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 24, 
@@ -257,7 +257,7 @@
     },
     { 
         "name":"Người Gia Lai",
-        "scr": "images/MyHang.jpg",
+        "scr": "assets/images/MyHang.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 25, 
@@ -268,7 +268,7 @@
     },
     { 
         "name":"Đặc sản Phú Yên",
-        "scr": "images/PhuYen.jpg",
+        "scr": "assets/images/PhuYen.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 26, 
@@ -279,7 +279,7 @@
     },
     { 
         "name":"Phúc",
-        "scr": "images/Phuc.jpg",
+        "scr": "assets/images/Phuc.jpg",
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 27, 
