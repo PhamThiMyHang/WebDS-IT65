@@ -10,9 +10,14 @@
         },
         {
             "type": "image",
-            "src": "images/bun-cha-nuoc-mam.jpg",
-            "alt": "Nước chấm bún chả hoàn hảo",
-            "caption": "Nước chấm là yếu tố quyết định sự thành công của món bún chả."
+            "src": "images/bun-cha-ha-noi-1.jpg",
+            "alt": "Bún chả Hà Nội",
+            "caption": "Bún chả Hà Nội"
+        },
+        {
+            "type": "Thời gian",
+            "level": 2,
+            "content": "Chuẩn bị: 40 phút      Chế biến: 45 phút       Độ khó: Trung bình"
         },
         {
             "type": "heading",
@@ -22,18 +27,141 @@
         {
             "type": "list",
             "items": [
-                "500g thịt ba chỉ",
-                "300g thịt nạc vai xay",
-                "Gia vị ướp (nước mắm, đường, tiêu...)"
+                " Bún tươi 1 kg",
+ "Thịt ba chỉ 700 gr",
+ "Thịt heo xay nhuyễn 500 gr",
+ "Cà rốt 1 củ",
+ "Đủ đủ xanh 1/2 trái",
+ "Đu đủ xanh 1/2 trái",
+ "Rau sống các loại 500 gr",
+"(xà lách/tía tô/hung quế/hung lủi/diếp cá)",
+" Rau sống các loại 500 gr",
+"(xà lách/ tía tô/ húng quế/ húng lủi/ diếp cá)",
+" Hành tím băm 1 muỗng canh",
+" Tỏi băm 1.5 muỗng canh",
+ "Ớt băm 1 ít",
+ "Dầu hào 2 muỗng canh",
+ "Mật ong 3 muỗng canh",
+ "Nước màu 2 muỗng canh",
+ "Nước mắm 1 chén",
+"(khoảng 220ml)",
+ "Giấm 1/2 chén",
+"(khoảng 100ml)",
+ "Dầu ăn 1 ít",
+ "Gia vị thông dụng 1 ít",
+"(muối/ đường/ tiêu xay/ hạt nêm/ bột ngọt)"
             ]
+        },
+         {
+            "type": "heading",
+            "level": 2,
+            "content": "Bước 1: Sơ chế"
+        },
+        {
+            "type": "paragraph",
+            "content": "Đối với thịt ba chỉ, để loại sạch bụi bẩn và mùi hôi các bạn mang đi chà sạch với muối, sau đó rửa lại với nước lạnh và để ráo. Dùng dao cắt thịt thành các miếng mỏng vừa ăn."
+        },
+         {
+            "type": "paragraph",
+            "content": "Việc nướng thịt trên than hoa sẽ cho hương vị truyền thống nhất. Lưu ý không nướng quá lâu để thịt không bị khô."
+        },
+         {
+            "type": "paragraph",
+            "content": "Ướp thịt với 1/2 muỗng canh hành tím băm, 1/2 muỗng canh tỏi băm, 1/2 muỗng canh hạt nêm, 1/2 muỗng canh bột ngọt, 1/2 muỗng canh tiêu xay, 2 muỗng canh nước mắm, 1 muỗng canh dầu hào, 2 muỗng canh mật ong, 1 muỗng canh nước màu, sau đó trộn đều và để cho thịt thấm gia vị ít nhất khoảng 30 phút."
+        },
+        {
+            "type": "paragraph",
+            "content":"Về phần thịt xay, các bạn cho 1/2 muỗng canh hành tím băm và 1/2 muỗng canh tỏi băm, 1/2 muỗng canh hạt nêm, 1/2 muỗng canh bột ngọt, 1/2 muỗng canh tiêu xay, 1.5 muỗng canh nước mắm, 1 muỗng canh dầu hào, 1 muỗng canh mật ong, 1 muỗng canh nước màu. Dùng tay trộn đều và ướp thịt khoảng 30 phút cho thấm gia vị."
+        },
+        {
+            "type":"paragraph",
+            "content":"Sau khoảng 30 phút, dùng tay lấy một lượng thịt xay vừa đủ rồi vo viên."
+        },
+        {
+            "type": "image",
+            "src": "images/bun-cha-ha-noi-2.jpg",
+            "alt": "Thịt viên",
+            "caption": "Thịt viên"
+        },
+         {
+            "type": "heading",
+            "level": 2,
+            "content": "Bước 2: Nguyên liệu gia vị:"
         },
         {
             "type": "paragraph",
             "content": "Việc nướng thịt trên than hoa sẽ cho hương vị truyền thống nhất. Lưu ý không nướng quá lâu để thịt không bị khô."
         },
+         {
+            "type": "paragraph",
+            "content": "Để loại sạch nhựa và bụi bẩn, cà rốt, đu đủ khi mua về các bạn gọt vỏ, sau đó mang ngâm với nước muối pha loãng khoảng 5 - 10 phút sau đó xả sạch lại với nước rồi để ráo."
+         },
+        {
+            "type":"paragraph",
+            "content":"Tiến hành tỉa hoa cho cà rốt, sau đó cắt cà rốt và đu đủ lát mỏng rồi cho vào tô. Cho tiếp 1/3 muỗng canh muối vào tô rồi trộn đều, ướp khoảng 15 phút sau đó rửa sạch cà rốt và đu đủ lại với nước"
+        },
+        {
+            "type":"paragraph",
+            "content":"Thêm tiếp 1.5 muỗng canh đường, 1/4 muỗng canh muối, 1 muỗng canh giấm, 1/2 muỗng canh tỏi băm vào rồi trộn đều và ướp thêm 15 phút nữa."
+        },
+        {
+            "type": "image",
+            "src": "images/bun-cha-ha-noi-3.jpg",
+            "alt": "Nguyên liệu",
+            "caption": "Nguyên liệu"
+        },
+         {
+            "type": "heading",
+            "level": 2,
+            "content": "Bước 3: Nướng thịt:"
+        },
+         {
+            "type": "paragraph",
+            "content": "Việc nướng thịt trên than hoa sẽ cho hương vị truyền thống nhất. Lưu ý không nướng quá lâu để thịt không bị khô."
+        },
+         {
+            "type":"image",
+            "src": "images/bun-cha-ha-noi-4.jpg",
+            "alt": "Nuong thit",
+            "caption": "Nướng thịt"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Bước 4: Nấu nước mắm:"
+        },
+         {
+            "type": "paragraph",
+            "content":"Bắc nồi lên bếp, cho vào non 1 chén nước mắm (khoảng 200ml), non 1 chén đường (khoảng 200gr), 1/2 chén giấm (khoảng 100ml) và 2 chén nước lọc vào và tiến hành nấu ở lửa lớn cho các gia vị tan hoàn toàn và nước mắm bắt đầu sôi thì tắt bếp. Nêm nếm lại gia vị sao cho vừa miệng của gia đình mình nhé!"
+         },
+         {
+            "type":"image",
+            "src": "images/bun-cha-ha-noi-5.jpg",
+            "alt": "Nước chấm",
+            "caption": "Linh hồn của nón ăn"
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Bước 5: Thành phẩm:"
+        },
+         {
+            "type": "paragraph",
+            "content": "Xếp thịt nướng, bún và rau sống ra dĩa. Cho cà rốt, đu đủ ngâm chua và 1 ít ớt băm ra bát sau đó cho nước mắm đường vừa nấu vào rồi khuấy đều là hoàn thành."
+        },
+        {
+            "type": "paragraph",
+            "content": "Chỉ với vài bước đơn giản chúng ta đã món bún chả Hà Nội thơm lừng, hấp dẫn chẳng thua kém ngoài hàng. Khi ăn các bạn gắp 1 ít thịt nướng, bún và rau thơm vào bát nước mắm rồi thưởng thức. Thịt có vị đậm đà, thơm hương của sả và hành, ăn cùng với nước mắm chua ngọt, rau thơm và đồ chua giúp cân bằng vị giác, khiến bạn cứ muốn ăn mãi không ngừng. Nhanh tay vào bếp và làm thử ngay món này nhé!"
+        },
+        {
+            "type":"image",
+            "src": "images/bun-cha-ha-noi-6.jpg",
+            "alt": "Thành phẩm",
+            "caption": "Thành phẩm"
+        },
         {
             "type": "video",
-            "embedUrl": "https://www.youtube.com/embed/bunChaTutorial"
+            "embedUrl": "https://www.youtube.com/watch?v=SQ1j8WkOUZM"
         }
     ]
 }

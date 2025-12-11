@@ -48,8 +48,8 @@
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 5, 
-        "title": "Làm chả giò giòn rụm", 
-        "excerpt": "Hướng dẫn chi tiết cách làm chả giò (nem rán) giòn rụm lâu, không bị ỉu.", 
+        "title": "Tips xuống bếp", 
+        "excerpt": "", 
         "type": "video", 
         "videoEmbedUrl": "https://www.youtube.com/embed/anotherExampleVideoID" 
     },
@@ -69,10 +69,10 @@
         "link":"Canhan.html",
         "time": "25/12/2025",
         "id": 7, 
-        "title": "Bánh mì Việt Nam", 
-        "excerpt": "Món ăn đường phố nổi tiếng thế giới.", 
+        "title": "GỎI CUỐN TÔM THỊT", 
+        "excerpt": "Món ăn đường phố quen thuộc khắp nẻo Sài Thành.", 
         "type": "image", 
-        "imageSrc": "banh-mi.jpg" 
+        "imageSrc": "GoiCuon.jpg" 
     },
     { 
         "name":"Mỹ Hằng",

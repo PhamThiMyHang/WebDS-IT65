@@ -1,13 +1,39 @@
-[
-     { 
-        "name":"Mỹ Hằng",
-        "scr": "images/MyHang.jpg",
-        "link":"Canhan.html",
-        "time": "25/12/2025",
-        "id": 1,
-        "title": "Bún chả Hà Nội", 
-        "excerpt": "Món bún chả thơm lừng, đậm đà hương vị truyền thống Hà Nội.", 
-        "type": "image", 
-        "imageSrc": "bun-cha.jpg" 
-    }
-]
+{
+    "id": 6,
+    "title": "Công thức làm bánh flan",  
+    "name": "Khanhs Duy",
+    "time": "25/12/2025",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "Bún chả không chỉ là một món ăn, mà còn là linh hồn ẩm thực của Hà Nội. Sự kết hợp giữa thịt nướng thơm lừng, nước chấm chua ngọt đậm đà và bún tươi mát tạo nên một trải nghiệm khó quên."
+        },
+        {
+            "type": "image",
+            "src": "images/bun-cha-nuoc-mam.jpg",
+            "alt": "Nước chấm bún chả hoàn hảo",
+            "caption": "Nước chấm là yếu tố quyết định sự thành công của món bún chả."
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Nguyên liệu cần chuẩn bị"
+        },
+        {
+            "type": "list",
+            "items": [
+                "500g thịt ba chỉ",
+                "300g thịt nạc vai xay",
+                "Gia vị ướp (nước mắm, đường, tiêu...)"
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": "Việc nướng thịt trên than hoa sẽ cho hương vị truyền thống nhất. Lưu ý không nướng quá lâu để thịt không bị khô."
+        },
+        {
+            "type": "video",
+            "embedUrl": "https://www.youtube.com/embed/bunChaTutorial"
+        }
+    ]
+}

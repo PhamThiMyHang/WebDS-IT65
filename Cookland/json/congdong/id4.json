@@ -1,13 +1,115 @@
-[
-     { 
-        "name":"Mỹ Hằng",
-        "scr": "images/MyHang.jpg",
-        "link":"Canhan.html",
-        "time": "25/12/2025",
-        "id": 1,
-        "title": "Bún chả Hà Nội", 
-        "excerpt": "Món bún chả thơm lừng, đậm đà hương vị truyền thống Hà Nội.", 
-        "type": "image", 
-        "imageSrc": "bun-cha.jpg" 
-    }
-]
+{
+    "id": 4,
+    "title": "Phở bò truyền thống", 
+    "name": "Khanhs Duy",
+    "time": "25/12/2025",
+    "blocks": [
+        {
+            "type": "paragraph",
+            "content": "" },
+        {
+            "type": "image",
+            "src": "",
+            "alt": "",
+            "caption": ""
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "content": "Phở bò – Món ăn không chỉ là niềm tự hào của ẩm thực Việt Nam mà còn là biểu tượng văn hóa được cả thế giới biết đến. Từng sợi phở mềm mịn hòa quyện cùng nước dùng trong veo, ngọt thanh từ xương bò, cộng thêm vị thơm bùi của thịt bò tái chín, tất cả tạo nên một hương vị đặc trưng khó quên." 
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "Nguyen liệu"
+        },
+        {
+            "type": "list",
+            "items": [
+                "Xương bò (xương ống hoặc xương sườn): 1.5 kg",
+                "Thịt bò: 500g (thăn bò, bắp bò)",
+                "Bánh phở: 500g",
+                "Hành tây: 1 củ lớn",
+                "Gừng: 1 củ nhỏ (khoảng 50g)",
+                "Hồi: 3-4 cánh",
+                "Quế: 1 thanh nhỏ",
+                "Đinh hương: 3-4 hạt",
+                "Hạt mùi: 1 thìa cà phê",
+                "Thảo quả: 1 quả",
+                "Hành lá, ngò gai, rau mùi: mỗi loại một ít",
+                "Chanh, ớt tươi: ăn kèm",
+                "Gia vị: Muối, đường phèn, nước mắm, bột ngọt"
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "1. Chuẩn bị nước dùng phở bò:"
+        },
+        {
+            "type": "paragraph",
+            "content": "Sơ chế xương bò: Xương bò rửa sạch, chần qua nước sôi để loại bỏ hết chất bẩn và mùi hôi. Sau đó, rửa lại xương bằng nước lạnh để xương sạch hoàn toàn."
+        },
+         {
+            "type": "paragraph",
+            "content": "Ninh xương: Cho xương vào nồi lớn, đổ ngập nước và đun sôi. Khi nước sôi, giảm lửa nhỏ và ninh trong khoảng 3-4 giờ. Trong quá trình ninh, nhớ hớt bọt liên tục để nước dùng được trong."
+        },
+         {
+            "type": "paragraph",
+            "content": "Thêm gia vị: Gừng và hành tây nướng sơ qua cho thơm, bóc vỏ, đập dập rồi cho vào nồi nước dùng. Tiếp tục cho quế, hồi, đinh hương, hạt mùi, thảo quả vào túi lọc (hoặc bỏ trực tiếp) và ninh thêm khoảng 1 giờ nữa. Nêm muối, nước mắm và đường phèn theo khẩu vị."
+        },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "2. Chuẩn bị thịt bò:"
+        },
+         {
+            "type": "paragraph",
+            "content": "Thịt bò: Rửa sạch, để ráo và thái lát mỏng. Thịt có thể chần qua nước sôi hoặc nhúng trực tiếp vào nước dùng khi ăn tùy sở thích." },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "3. Chuẩn bị bánh phở:"
+        },
+        {
+            "type": "paragraph",
+            "content": "Bánh phở: Chần qua nước sôi để làm mềm, sau đó xả nhanh qua nước lạnh để bánh phở không dính vào nhau. Để ráo nước." },
+        {
+            "type": "heading",
+            "level": 2,
+            "content": "4. Hoàn thiện tô phở bò:"
+        },    
+            {
+            "type": "paragraph",
+            "content": "- Xếp bánh phở vào tô: Sau đó thêm thịt bò thái lát lên trên." },
+            {
+            "type": "paragraph",
+            "content": "- Chan nước dùng: Chan nước dùng nóng hổi lên tô phở, đảm bảo nước dùng phải đủ ngập bánh phở và thịt bò để giữ nhiệt và hương vị." },
+            {
+            "type": "paragraph",
+            "content": "- Trang trí: Thêm hành lá, ngò gai, rau mùi thái nhỏ lên trên để tăng thêm hương vị cho món ăn." },
+            {
+            "type": "paragraph",
+            "content": "- Thưởng thức: Ăn kèm với chanh, ớt tươi, có thể thêm nước mắm hoặc bột ngọt tùy khẩu vị." },
+         {
+            "type": "heading",
+            "level": 2,
+            "content": "Bí quyết để phở bò thêm phần đặc sắc:"
+        },        
+            {
+            "type": "paragraph",
+            "content": "Xương bò tươi và nước dùng trong: Xương bò tươi và việc ninh nước dùng lâu là bí quyết tạo nên hương vị ngọt thanh, đặc trưng cho món phở. Hãy chọn xương bò còn tươi và ninh thật kỹ để có nước dùng trong veo, ngọt đậm đà." },
+            {
+            "type": "paragraph",
+            "content": "Gia vị đúng chuẩn: Hương thơm của quế, hồi, đinh hương và thảo quả là yếu tố quan trọng tạo nên hương vị phở bò chuẩn vị. Đừng quên nướng gừng và hành tây để gia vị thêm phần đậm đà" },
+
+        {
+            "type": "video",
+            "embedUrl": "https://www.youtube.com/watch?v=QiCQKOORS_0"
+        }
+    ]
+}
